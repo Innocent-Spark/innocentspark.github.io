@@ -5,61 +5,107 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Innocent Spark UG</title>
 <style>
-  @keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes colorShift {
+  0%, 100% { border-color: rgba(255, 255, 255, 0.3); }
+  50% { border-color: rgba(255, 255, 255, 0.6); }
 }
 
 .event-horizon-container {
   position: relative;
-  width: 150px;
-  height: 150px;
-  margin: 20px auto;
+  width: 200px;
+  height: 200px;
+  margin: 40px auto;
+  animation: pulse 5s infinite;
 }
 
 .event-horizon {
-  border: 5px solid #333;
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  box-shadow: inset 0 0 10px #000, 0 0 20px rgba(255, 255, 255, 0.5);
-  animation: rotate 60s linear infinite, pulse 2s infinite;
+  animation: rotate 45s linear infinite, colorShift 6s infinite;
 }
 
 .event-horizon::before,
 .event-horizon::after {
   content: '';
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  width: 80%;
-  height: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
+  animation: rotate 30s linear infinite, colorShift 7s infinite;
+}
+
+.event-horizon::before {
+  width: 80%;
+  height: 80%;
   transform: translate(-50%, -50%);
-  animation: rotate 120s linear infinite;
 }
 
 .event-horizon::after {
   width: 60%;
   height: 60%;
+  transform: translate(-50%, -50%);
   animation-direction: reverse;
+}
+
+/* Additional layers for complexity */
+.event-horizon-layer {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: rotate 20s linear infinite, colorShift 8s infinite;
+}
+
+.event-horizon-layer:nth-child(1) {
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  animation-duration: 60s;
+}
+
+.event-horizon-layer:nth-child(2) {
+  width: 140%;
+  height: 140%;
+  transform: translate(-50%, -50%);
+  animation-duration: 75s;
+  animation-direction: reverse;
+}
+
+.event-horizon-layer:nth-child(3) {
+  width: 160%;
+  height: 160%;
+  transform: translate(-50%, -50%);
+  animation-duration: 90s;
+}
+
+.event-horizon-layer:nth-child(4) {
+  width: 180%;
+  height: 180%;
+  transform: translate(-50%, -50%);
+  animation-duration: 120s;
+  animation-direction: reverse;
+}
+
+.container {
+  z-index: 10;
+  position: relative;
 }
 
 .container {
@@ -108,6 +154,10 @@
     <p>+49-176-98455845</p>
   </div>
 <div class="event-horizon-container">
+  <div class="event-horizon-layer"></div>
+  <div class="event-horizon-layer"></div>
+  <div class="event-horizon-layer"></div>
+  <div class="event-horizon-layer"></div>
   <div class="event-horizon"></div>
 </div>
 </div>
