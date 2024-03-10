@@ -4,162 +4,41 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Innocent Spark UG</title>
-<style>
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
 
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.8; }
-}
 
-@keyframes colorShift {
-  0%, 100% { border-color: rgba(255, 255, 255, 0.3); }
-  50% { border-color: rgba(255, 255, 255, 0.6); }
-}
-
-.event-horizon-container {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 40px auto;
-  animation: pulse 5s infinite;
-}
-
-.event-horizon {
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: rotate 45s linear infinite, colorShift 6s infinite;
-}
-
-.event-horizon::before,
-.event-horizon::after {
-  content: '';
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  animation: rotate 30s linear infinite, colorShift 7s infinite;
-}
-
-.event-horizon::before {
-  width: 80%;
-  height: 80%;
-  transform: translate(-50%, -50%);
-}
-
-.event-horizon::after {
-  width: 60%;
-  height: 60%;
-  transform: translate(-50%, -50%);
-  animation-direction: reverse;
-}
-
-/* Additional layers for complexity */
-.event-horizon-layer {
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  animation: rotate 20s linear infinite, colorShift 8s infinite;
-}
-
-.event-horizon-layer:nth-child(1) {
-  width: 120%;
-  height: 120%;
-  transform: translate(-50%, -50%);
-  animation-duration: 60s;
-}
-
-.event-horizon-layer:nth-child(2) {
-  width: 140%;
-  height: 140%;
-  transform: translate(-50%, -50%);
-  animation-duration: 75s;
-  animation-direction: reverse;
-}
-
-.event-horizon-layer:nth-child(3) {
-  width: 160%;
-  height: 160%;
-  transform: translate(-50%, -50%);
-  animation-duration: 90s;
-}
-
-.event-horizon-layer:nth-child(4) {
-  width: 180%;
-  height: 180%;
-  transform: translate(-50%, -50%);
-  animation-duration: 120s;
-  animation-direction: reverse;
-}
-
-.container {
-  z-index: 10;
-  position: relative;
-}
-
-.container {
-  z-index: 10;
-  position: relative;
-}
-
-/* Add this inside your existing <style> tag */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f7f7f7;
-  }
-  .container {
-    text-align: center;
-    max-width: 800px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
-  .company-name {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  .legal-info {
-    font-size: 1em;
-    line-height: 1.6;
-  }
-</style>
 </head>
 <body>
-<div class="container">
-  <div class="company-name">Innocent Spark UG</div>
-  <div class="legal-info">
-    <p>Straßburger Straße 17, 10405 Berlin</p>
-    <p>37/359/52935</p>
-    <p>HRB248765B</p>
-    <p>Managing Director: Joseph Finlayson</p>
-    <p>joseph@innocentspark.com</p>
-    <p>+49-176-98455845</p>
-  </div>
-<div class="event-horizon-container">
-  <div class="event-horizon-layer"></div>
-  <div class="event-horizon-layer"></div>
-  <div class="event-horizon-layer"></div>
-  <div class="event-horizon-layer"></div>
-  <div class="event-horizon"></div>
+    <div class="experience"></div>
+    <div></div>
+
+    <div class="legalinfo">
+        <p>Innocent Spark UG</p>
+        <p>Straßburger Straße 17, 10405 Berlin</p>
+        <p>37/359/52935</p>
+        <p>HRB248765B</p>
+        <p>Managing Director: Joseph Finlayson</p>
+        <p><a href="mailto:joseph@innocentspark.com" style="color: #72337c;">joseph@innocentspark.com</a></p>
+        <p><a href="tel:+4917698455845" style="color: #72337c;">+49-176-98455845</a></p>
+    </div>
+
+
 </div>
-</div>
+
+<style src="./style.css"></style>
+
+<style>
+
+.legalinfo {
+        z-index: 1000;
+        background-color: white;
+        position: absolute;
+        padding: 14px;
+    
+    color: rgb(124, 51, 124);
+    border: 2px solid pink;
+    box-shadow: 0px 0px 10px #000000;
+}
+</style>
+<script src="./script.js"></script>
 </body>
 </html>
