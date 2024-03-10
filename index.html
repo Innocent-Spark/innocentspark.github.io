@@ -5,7 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Innocent Spark UG</title>
 
+<script>
+    if ('ontouchstart' in window) {
+        var experienceElement = document.querySelector('.experience');
 
+        experienceElement.addEventListener('touchstart', function(event) {
+            event.preventDefault();
+        }, { passive: false });
+
+        experienceElement.addEventListener('touchmove', function(event) {
+            event.preventDefault();
+        }, { passive: false });
+
+        experienceElement.addEventListener('touchend', function(event) {
+            event.preventDefault();
+        }, { passive: false });
+    }
+</script>
 </head>
 <body>
     <div class="experience"></div>
