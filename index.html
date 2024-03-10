@@ -5,6 +5,69 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Innocent Spark UG</title>
 <style>
+  @keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.event-horizon-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+}
+
+.event-horizon {
+  border: 5px solid #333;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: inset 0 0 10px #000, 0 0 20px rgba(255, 255, 255, 0.5);
+  animation: rotate 60s linear infinite, pulse 2s infinite;
+}
+
+.event-horizon::before,
+.event-horizon::after {
+  content: '';
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate 120s linear infinite;
+}
+
+.event-horizon::after {
+  width: 60%;
+  height: 60%;
+  animation-direction: reverse;
+}
+
+.container {
+  z-index: 10;
+  position: relative;
+}
+
+/* Add this inside your existing <style> tag */
   body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -44,6 +107,9 @@
     <p>joseph@innocentspark.com</p>
     <p>+49-176-98455845</p>
   </div>
+<div class="event-horizon-container">
+  <div class="event-horizon"></div>
+</div>
 </div>
 </body>
 </html>
