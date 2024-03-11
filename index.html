@@ -1,40 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Innocent Spark UG</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innocent Spark UG</title>
 
-<script>
-    if ('ontouchstart' in window) {
-        var experienceElement = document.querySelector('.experience');
-
-        experienceElement.addEventListener('touchstart', function(event) {
-            event.preventDefault();
-        }, { passive: false });
-
-        experienceElement.addEventListener('touchmove', function(event) {
-            event.preventDefault();
-        }, { passive: false });
-
-        experienceElement.addEventListener('touchend', function(event) {
-            event.preventDefault();
-        }, { passive: false });
-
-        experienceElement.addEventListener('dragstart', function(event) {
-            event.preventDefault();
-        }, { passive: false });
-
-        experienceElement.addEventListener('drag', function(event) {
-            event.preventDefault();
-        }, { passive: false });
-
-        experienceElement.addEventListener('dragend', function(event) {
-            event.preventDefault();
-        }, { passive: false });
-    }
-</script>
 </head>
+
 <body>
     <div class="experience"></div>
     <div></div>
@@ -50,36 +23,59 @@
     </div>
 
 
-</div>
+    </div>
 
-<style src="./style.css"></style>
+    <style src="./style.css"></style>
 
-<style>
+    <style>
+        .legalinfo {
+            z-index: 1000;
+            background-color: white;
+            position: absolute;
+            padding: 14px;
 
-.legalinfo {
-        z-index: 1000;
-        background-color: white;
-        position: absolute;
-        padding: 14px;
-    
-    color: rgb(124, 51, 124);
-    border: 2px solid pink;
-    box-shadow: 0px 0px 10px #000000;
-}
-</style>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
-    @media (max-width: 768px) {
-        body {
-            overflow: visible;
+            color: rgb(124, 51, 124);
+            border: 2px solid pink;
+            box-shadow: 0px 0px 10px #000000;
         }
-    }
-</style>
+    </style>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
-<script src="./script.js"></script>
+        @media (max-width: 768px) {
+            body {
+                overflow: visible;
+            }
+        }
+    </style>
+
+    <script src="./script.js"></script>
+
+
+    <script async defer>
+        // set a timeout to ensure the canvas is loaded
+        setTimeout(function () {
+            var experienceElement = document.querySelector('canvas');
+            console.log('experienceElement', experienceElement);
+
+            var events = [
+                'pointerdown', 'pointerup',  'pointerout',
+                'pointerenter', 'pointerleave', 'mousedown', 'touchstart',
+                'touchmove', 'touchend', 'dragstart', 'drag', 'dragend'
+            ];
+
+            events.forEach(function (eventType) {
+                experienceElement.addEventListener(eventType, function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }, { passive: false });
+            });
+        }, 500);
+    </script>
 </body>
+
 </html>
