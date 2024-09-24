@@ -62,10 +62,8 @@
     <script async defer>
         // set a timeout to ensure the canvas is loaded
         setTimeout(function () {
-            var experienceElement = document.querySelector('canvas');
-            console.log('experienceElement', experienceElement);
-
-            var events = [
+            const experienceElement = document.querySelector('canvas');
+            const events = [
                 'pointerdown', 'pointerup',  'pointerout',
                 'pointerenter', 'pointerleave', 'mousedown', 'touchstart',
                 'touchmove', 'touchend', 'dragstart', 'drag', 'dragend'
