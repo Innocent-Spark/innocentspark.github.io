@@ -9,6 +9,7 @@ This is the website for Innocent Spark UG, built with [11ty (Eleventy)](https://
 
 ## Features
 
+- **Content Management with Markdown**: Content is stored in Markdown files, completely separate from the presentation templates.
 - **Dynamic Gallery**: The Portugal page automatically displays all images and videos from the `pics` folder, making it easy to add new media without editing HTML.
 - **Responsive Design**: The site is fully responsive and works well on mobile devices.
 - **Static Site Generation**: Built with 11ty for fast loading and easy hosting.
@@ -49,7 +50,20 @@ npm run build
 
 The built site will be in the `_site` directory.
 
-## Adding Media
+## Content Management
+
+### Editing Content
+
+The content for the Portugal page is stored in Markdown files in the `src/content/portugal` directory:
+
+1. Each section has its own Markdown file (e.g., `intro.md`, `land.md`)
+2. The `meta.json` file contains metadata and defines the order of sections
+3. To edit content, simply modify the corresponding Markdown file
+4. To add a new section:
+   - Create a new Markdown file in the `src/content/portugal` directory
+   - Add the section name to the `sections` array in `meta.json`
+
+### Adding Media
 
 To add new images or videos to the Portugal page gallery:
 
@@ -94,6 +108,7 @@ To enable GitHub Pages deployment with GitHub Actions:
   - `_includes/`: Reusable components
   - `_layouts/`: Page layouts
   - `_data/`: Data files for templates
+  - `content/`: Markdown content files
   - `*.njk`: Page templates
 - `pics/`: Images and videos
 - `script.js`: JavaScript for the site

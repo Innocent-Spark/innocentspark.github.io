@@ -28,6 +28,9 @@ module.exports = function(eleventyConfig) {
     return markdownLibrary.render(content);
   });
 
+  // Ignore content files - we don't want to generate pages for them
+  eleventyConfig.ignores.add("src/content/**/*");
+
   return {
     dir: {
       input: "src",
