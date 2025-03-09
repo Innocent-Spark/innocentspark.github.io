@@ -8,7 +8,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("script.js");
   eleventyConfig.addPassthroughCopy("style.css");
   eleventyConfig.addPassthroughCopy("CNAME");
-  eleventyConfig.addPassthroughCopy(".nojekyll");
 
   // Add a debug filter for templates
   eleventyConfig.addFilter("debug", (content) => {
@@ -19,10 +18,7 @@ module.exports = function(eleventyConfig) {
   let markdownLibrary = markdownIt({
     html: true,
     breaks: true,
-    linkify: true,
-    typographer: true,
-    // Enable better list handling
-    listIndent: 2
+    linkify: true
   }).use(markdownItAnchor);
   
   eleventyConfig.setLibrary("md", markdownLibrary);
