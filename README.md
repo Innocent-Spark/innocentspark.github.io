@@ -10,6 +10,7 @@ This is the website for Innocent Spark UG, built with [11ty (Eleventy)](https://
 ## Features
 
 - **Content Management with Markdown**: Content is stored in Markdown files, completely separate from the presentation templates.
+- **Project Updates Blog**: The Portugal page includes a blog-like updates section for sharing project progress.
 - **Dynamic Gallery**: The Portugal page automatically displays all images and videos from the `pics` folder, making it easy to add new media without editing HTML.
 - **Responsive Design**: The site is fully responsive and works well on mobile devices.
 - **Static Site Generation**: Built with 11ty for fast loading and easy hosting.
@@ -62,6 +63,25 @@ The content for the Portugal page is stored in Markdown files in the `src/conten
 4. To add a new section:
    - Create a new Markdown file in the `src/content/portugal` directory
    - Add the section name to the `sections` array in `meta.json`
+
+### Adding Project Updates
+
+To add a new update to the Portugal project:
+
+1. Edit the `src/content/portugal/updates.md` file
+2. Add a new update using the following format:
+
+```markdown
+## Month Day, Year
+
+Your update text goes here. 
+You can use multiple paragraphs.
+
+And Markdown formatting.
+```
+
+3. The newest updates should be placed at the top of the file
+4. Each update must start with a level 2 heading (`##`) containing the date
 
 ### Adding Media
 
