@@ -7,4 +7,4 @@ While the property feels secluded, the nearest village is just a short drive awa
 - A restaurant serving traditional food
 - An excellent bakery for fresh bread 
 
-In the area there are some pretty great restaurants -> https://maps.app.goo.gl/bwvkisYTNQSixVZP7 this is my favorite
+In the area, there are some excellent restaurants. [This is my favorite](https://maps.app.goo.gl/bwvkisYTNQSixVZP7).

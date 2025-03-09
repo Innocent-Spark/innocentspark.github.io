@@ -8,8 +8,7 @@ The property was acquired for €130,000, with approximately €15,000 in additi
 
 Given the total investment of €145,000 and 7 redevelopable buildings, each building represents approximately €20,700 of the property's value. Therefore, the minimum investment to secure rights to redevelop one building would be around €21,000, or roughly 14.5% ownership in the company.
 
-However, money is only one kind of investment, if you have special skills that are applicable in a rural environment, or you are up for living there full time while amenities are getting build we can discuss other ways of getting involved. 
-
+However, money is only one kind of investment. If you have special skills that are applicable in a rural environment, or you are up for living there full-time while amenities are being built, we can discuss other ways of getting involved.
 
 ## Beyond Financial Returns
 
