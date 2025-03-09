@@ -3,7 +3,8 @@ const path = require('path');
 const markdownIt = require('markdown-it')({
   html: true,
   breaks: true,
-  linkify: true
+  linkify: true,
+  typographer: true
 });
 
 module.exports = function() {
@@ -53,6 +54,10 @@ module.exports = function() {
           else if (inEntry && line.trim() !== '') {
             currentEntry += line + '\n';
           }
+          else if (inEntry) {
+            // Preserve empty lines for paragraph breaks
+            currentEntry += '\n';
+          }
         }
         
         // Close the last entry if there is one
@@ -67,6 +72,7 @@ module.exports = function() {
         result[section] = html;
       } else {
         // Normal processing for other sections
+        // Ensure we preserve the content exactly as it is
         result[section] = markdownIt.render(content);
       }
     }
