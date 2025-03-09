@@ -1,0 +1,14 @@
+# This file is intentionally empty to prevent GitHub from using the default Jekyll build process
+# The site is built using Eleventy via the build-deploy.yml workflow
+name: Placeholder to disable Jekyll
+
+on:
+  # This workflow will never actually run
+  workflow_dispatch:
+
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Do nothing
+        run: echo "This workflow is a placeholder and does nothing" 

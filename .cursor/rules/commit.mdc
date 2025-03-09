@@ -1,9 +1,9 @@
 ---
-description: everything
+description: Auto commit
 globs: 
-alwaysApply: false
+alwaysApply: true
 ---
 
 # Your rule content
 
-after every meaningful update, write a meaningful commit message and push it
+after every  update, write a meaningful commit message and push it
