@@ -4,7 +4,8 @@ const markdownIt = require('markdown-it')({
   html: true,
   breaks: true,
   linkify: true,
-  typographer: true
+  typographer: true,
+  listIndent: 2
 });
 
 module.exports = function() {

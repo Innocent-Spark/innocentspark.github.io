@@ -1,0 +1,9 @@
+---
+description: everything
+globs: 
+alwaysApply: false
+---
+
+# Your rule content
+
+after every meaningful update, write a meaningful commit message and push it
