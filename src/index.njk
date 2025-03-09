@@ -49,17 +49,19 @@ customStyles: |
     // set a timeout to ensure the canvas is loaded
     setTimeout(function () {
         const experienceElement = document.querySelector('canvas');
-        const events = [
-            'pointerdown', 'pointerup',  'pointerout',
-            'pointerenter', 'pointerleave', 'mousedown', 'touchstart',
-            'touchmove', 'touchend', 'dragstart', 'drag', 'dragend'
-        ];
+        if (experienceElement) {
+            const events = [
+                'pointerdown', 'pointerup',  'pointerout',
+                'pointerenter', 'pointerleave', 'mousedown', 'touchstart',
+                'touchmove', 'touchend', 'dragstart', 'drag', 'dragend'
+            ];
 
-        events.forEach(function (eventType) {
-            experienceElement.addEventListener(eventType, function (event) {
-                event.preventDefault();
-                event.stopPropagation();
-            }, { passive: false });
-        });
+            events.forEach(function (eventType) {
+                experienceElement.addEventListener(eventType, function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }, { passive: false });
+            });
+        }
     }, 500);
 </script> 

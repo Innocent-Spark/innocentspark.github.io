@@ -5,10 +5,14 @@
     box-sizing: border-box;
 }
 
-html,
-body
-{
+/* Only apply overflow: hidden to the homepage */
+body.homepage {
     overflow: hidden;
+}
+
+/* All other pages should have normal scrolling */
+body:not(.homepage) {
+    overflow: auto;
 }
 
 .experience
