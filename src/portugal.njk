@@ -62,8 +62,18 @@ customStyles: |
         color: #16a34a;
         text-decoration: underline;
     }
+    
+    .home-link {
+        display: inline-block;
+        margin-bottom: 1rem;
+        color: #16a34a;
+        text-decoration: underline;
+        font-weight: 600;
+    }
 ---
-{% include "navigation.njk" %}
+<div class="container mx-auto px-4 py-4">
+    <a href="/" class="home-link">← Back to Home</a>
+</div>
 
 <header class="bg-green-600 text-white py-6">
     <div class="container mx-auto px-4">
