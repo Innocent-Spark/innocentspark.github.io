@@ -9,33 +9,20 @@ externalStyles:
 
 <header class="bg-green-600 text-white py-6">
     <div class="container mx-auto px-4">
-        <h1 class="text-3xl font-bold">Portuguese Riverside Co-Living Project</h1>
-        <p class="mt-2">Interested in joining a unique co-living experiment in rural Portugal? Fill in the form <a href="https://forms.gle/5SBg3RwLT8A7Qmn47" class="underline font-semibold">here</a> to get started! 🙋</p>
+        <h1 class="text-3xl font-bold">{{ portugal.meta.title }}</h1>
+        <p class="mt-2">{{ portugal.meta.headerText | markdown | safe }}</p>
     </div>
 </header>
 
 <main class="container mx-auto px-4 py-8">
-    <section class="mb-8">
-        <h2 class="text-2xl font-bold mb-4">Introduction</h2>
-        <p>I'm Joseph, a 36-year-old British software developer based in Berlin, with a passion for nature and sustainable living. I've recently acquired a beautiful 5.3-hectare property along the Rio Paiva in northern Portugal, and I'm looking for like-minded individuals to join me in co-owning and developing this land into a sustainable community.</p>
-        <p class="mt-4">Inspired by projects like <a href="https://tynan.com/empire/" class="underline font-semibold">Empire</a> and <a href="https://projectkamp.com/mission.html" class="underline font-semibold">Projekt Kamp</a>, our goal is to restore a former hamlet and create a space that fosters social connections, creativity, and sustainability, while respecting the natural environment.</p>
-    </section>
-
-    <section class="mb-8">
-        <h2 class="text-2xl font-bold mb-4">The Land</h2>
-        <ul class="list-disc list-inside">
-            <li>5.3 hectares (13 acres) of diverse, untouched landscape</li>
-            <li>Frontage on the pristine Rio Paiva with a small river beach</li>
-            <li>7 stone ruins in various states, currently being legalized</li>
-            <li>Mixed oak/pine forest including 20 cork oaks</li>
-            <li>Historic terraces ideal for crop cultivation</li>
-            <li>Ample pasture for grazing animals</li>
-            <li>30 olive trees and 50 grapevines</li>
-            <li>Convenient location: Just a 1h45 drive from Porto</li>
-        </ul>
-    </section>
+    {% for section in portugal.meta.sections %}
+        {% set content = portugal[section] %}
+        <section class="mb-8">
+            {{ content | safe }}
+        </section>
+    {% endfor %}
     
-    <section class="container mx-auto px-4 py-8">
+    <section class="mb-8">
         <h2 class="text-2xl font-bold mb-4">Gallery</h2>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <!-- Images -->
@@ -52,64 +39,11 @@ externalStyles:
     </section>
 
     <section class="mb-8">
-        <h2 class="text-2xl font-bold mb-4">Project Vision</h2>
-        <p>We aim to create a community that balances private and shared spaces, allowing for both solitude and collaboration. Our long-term vision includes:</p>
-        <ol class="list-decimal list-inside mt-4">
-            <li>Restoring the 7 stone ruins into a combination of private homes and shared spaces</li>
-            <li>Developing sustainable systems for food production, energy, and water management</li>
-            <li>Creating spaces for creative pursuits, such as art studios, music rooms, or workshops</li>
-            <li>Establishing a supportive community that values sustainable living and mutual support</li>
-        </ol>
-    </section>
-
-    <section class="mb-8">
-        <h2 class="text-2xl font-bold mb-4">Next Steps</h2>
-        <ol class="list-decimal list-inside">
-            <li>Join our WhatsApp group to discuss the project: <a href="https://chat.whatsapp.com/DHxDfpmT3Io3XWgp60gmlB" class="underline font-semibold">WhatsApp Link</a></li>
-            <li>Fill out our interest form to share your ideas and preferences: <a href="https://docs.google.com/forms/d/e/1FAIpQLSesYGzNvYBu6CiMB5lk5Lp2bLVNs4zbB5Rq3JErVk2kCoYLCQ/viewform" class="underline font-semibold">Form Link</a></li>
-            <li>Arrange a visit to the property to experience its potential firsthand</li>
-        </ol>
-    </section>
-
-    <section class="mb-8">
-        <h2 class="text-2xl font-bold mb-4">Investment Opportunity</h2>
-        <p>We're offering a 50% co-ownership of this unique property. This is more than just a financial investment; it's an opportunity to be part of a transformative project and to shape a sustainable future in one of Europe's most unspoiled regions.</p>
-    </section>
-
-    <section class="mb-8">
-        <h2 class="text-2xl font-bold mb-4">Nearby Amenities</h2>
-        <p>While the property feels secluded, the nearest village is just a short drive away, offering:</p>
-        <ul class="list-disc list-inside mt-4">
-            <li>A well-stocked supermarket</li>
-            <li>A café/bar</li>
-            <li>A restaurant</li>
-            <li>An excellent bakery for fresh bread</li>
-        </ul>
-    </section>
-
-    <section class="mb-8">
         <h2 class="text-2xl font-bold mb-4">Location</h2>
         <p class="mb-4">Come and visit!:</p>
         <div class="aspect-w-16 aspect-h-9">
-            <iframe src="https://www.google.com/maps/d/embed?mid=1ESsYmp2h2asqLc04oQez75zsNf_m6hI" width="100%" height="480" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="{{ portugal.meta.mapEmbedUrl }}" width="100%" height="480" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
-    </section>
-
-    <section class="mb-8">
-        <h2 class="text-2xl font-bold mb-4">Sustainable Living Resources</h2>
-        <ul class="list-disc list-inside">
-            <li>Trees for firewood and simple construction</li>
-            <li>Pastures for grazing animals</li>
-            <li>Terraces for growing crops</li>
-            <li>Crystal-clear river for swimming and relaxation</li>
-            <li>Option for off-grid or on-grid power</li>
-        </ul>
-    </section>
-
-    <section class="text-center">
-        <h2 class="text-2xl font-bold mb-4">Join Us!</h2>
-        <p class="mb-4">Join us in creating a sustainable haven that combines the best of private ownership and community living. If you're excited about the prospect of restoring a historic hamlet, living close to nature, and being part of a forward-thinking community, we'd love to hear from you!</p>
-        <a href="https://forms.gle/5SBg3RwLT8A7Qmn47" class="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700">Fill in the form to get started on this exciting journey!</a>
     </section>
 </main>
 

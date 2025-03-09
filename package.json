@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/Innocent-Spark/innocentspark.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0"
   }
 }
