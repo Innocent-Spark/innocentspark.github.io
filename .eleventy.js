@@ -1,3 +1,6 @@
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
+
 module.exports = function(eleventyConfig) {
   // Copy static assets directly to the output folder
   eleventyConfig.addPassthroughCopy("assets");
@@ -9,6 +12,20 @@ module.exports = function(eleventyConfig) {
   // Add a debug filter for templates
   eleventyConfig.addFilter("debug", (content) => {
     return `<pre>${JSON.stringify(content, null, 2)}</pre>`;
+  });
+
+  // Configure Markdown
+  let markdownLibrary = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true
+  }).use(markdownItAnchor);
+  
+  eleventyConfig.setLibrary("md", markdownLibrary);
+
+  // Add a filter to convert Markdown to HTML
+  eleventyConfig.addFilter("markdown", (content) => {
+    return markdownLibrary.render(content);
   });
 
   return {

@@ -1,0 +1,16 @@
+{
+  "title": "Portuguese Riverside Co-Living Project",
+  "description": "Join a unique co-living experiment in rural Portugal",
+  "headerText": "Interested in joining a unique co-living experiment in rural Portugal? Fill in the form [here](https://forms.gle/5SBg3RwLT8A7Qmn47) to get started! 🙋",
+  "mapEmbedUrl": "https://www.google.com/maps/d/embed?mid=1ESsYmp2h2asqLc04oQez75zsNf_m6hI",
+  "sections": [
+    "intro",
+    "land",
+    "vision",
+    "next-steps",
+    "investment",
+    "amenities",
+    "resources",
+    "join"
+  ]
+} 
