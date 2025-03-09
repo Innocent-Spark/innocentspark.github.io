@@ -2,10 +2,12 @@
 
 ## May 15, 2024
 
-Hey folks,
+Hello future neighbors!
 
-Just a little update on the project.
+Exciting progress to share on our Portuguese paradise project!
 
-Late last year, a topographic surveyor and I walked the boundaries of the land and uncovered the (ancient) markers laying out the borders. This will be used to update the rural land registry - BUPi. Surrounding the land on the eastern side, there is some land that is unowned. More river area is assigned to the plot than we expected.
+Last winter brought a wonderful discovery—while walking the land with a topographic surveyor, we uncovered ancient stone markers that have defined these boundaries for centuries. This historical connection adds another layer of magic to our project. Even better news: the official land registry (BUPi) shows we have more river frontage than initially thought, and there's unclaimed land on our eastern border that could potentially expand our community's reach.
 
-Dmitry and I are seeking planning permission from the city council for two houses. We have commissioned an architect who has met with the city council, which has requested us to send in more details about our vision. 
+The local authorities have been incredibly supportive of our vision. Dmitry and I have begun the planning permission process for the first two homes, working with a talented local architect who understands both traditional Portuguese building methods and modern sustainability practices. The city council is enthusiastic about our project and has asked for more details about our vision—a positive sign that they welcome thoughtful development in the region.
+
+Every step forward makes this dream more tangible. We can't wait to share this journey with you! 

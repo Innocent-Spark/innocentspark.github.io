@@ -1,15 +1,24 @@
-# Investment Opportunity
+# Your Opportunity to Join Something Extraordinary
 
-We've structured this project as a shared venture through a company that holds the property in trust. By investing, you'll become a shareholder in this company, which serves as the steward of this beautiful land.
+We've created a unique ownership structure that balances security with flexibility. Our property is held by a dedicated company, and by joining us, you become more than an investor—you become a genuine stakeholder in a living, growing community with both tangible and intangible returns.
 
-## Financial Details
+## Accessible Entry Points
 
-The property was acquired for €130,000, with approximately €15,000 in additional taxes and notary fees. The land includes 7 redevelopable stone buildings, which represent limited and valuable assets within the property.
+The entire property was acquired for just €145,000 (including all taxes and fees)—a remarkable value for 5.3 hectares of pristine Portuguese countryside with seven stone buildings ready for transformation. This means your entry investment can be surprisingly affordable:
 
-Given the total investment of €145,000 and 7 redevelopable buildings, each building represents approximately €20,700 of the property's value. Therefore, the minimum investment to secure rights to redevelop one building would be around €21,000, or roughly 14.5% ownership in the company.
+- **€21,000** grants you approximately 14.5% ownership and the rights to transform one of the historic stone buildings into your personal sanctuary
+- **Smaller investments** are welcome and give you access to the community and shared spaces
+- **Flexible arrangements** are possible for those bringing special skills or committing to on-site involvement
 
-However, money is only one kind of investment. If you have special skills that are applicable in a rural environment, or you are up for living there full-time while amenities are being built, we can discuss other ways of getting involved.
+What makes this opportunity truly special is its accessibility—where else in Western Europe can you co-own a riverside property with historic buildings for such a modest investment?
 
-## Beyond Financial Returns
+## Value Beyond Money
 
-This opportunity transcends traditional investment. As a shareholder, you'll help shape a sustainable community in one of Europe's most pristine regions, creating both environmental and social value alongside any financial returns. 
+This isn't just about owning a vacation home or making a financial return. As a co-owner, you'll:
+
+- **Create a legacy** by restoring historic buildings and revitalizing the land
+- **Build deep connections** with like-minded community members from around the world
+- **Learn valuable skills** in sustainable living, from permaculture to natural building
+- **Experience the profound satisfaction** of creating something meaningful that can be enjoyed for generations
+
+Many of us dream of escaping the urban grind and connecting with nature and community. This is your chance to make that dream a reality with a supportive group who shares your vision. 
