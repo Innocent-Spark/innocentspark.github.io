@@ -47,23 +47,19 @@ customStyles: |
     <p><a href="/portugal/">Portugal Project</a></p>
 </div>
 
-<script async defer>
-    // set a timeout to ensure the canvas is loaded
-    setTimeout(function () {
-        const experienceElement = document.querySelector('canvas');
-        if (experienceElement) {
-            const events = [
-                'pointerdown', 'pointerup',  'pointerout',
-                'pointerenter', 'pointerleave', 'mousedown', 'touchstart',
-                'touchmove', 'touchend', 'dragstart', 'drag', 'dragend'
-            ];
-
-            events.forEach(function (eventType) {
-                experienceElement.addEventListener(eventType, function (event) {
-                    event.preventDefault();
-                    event.stopPropagation();
+<script>
+    // Prevent scrolling conflicts with 3D canvas
+    window.addEventListener('DOMContentLoaded', () => {
+        const canvas = document.querySelector('canvas');
+        if (canvas) {
+            ['pointerdown', 'pointerup', 'pointerout', 'pointerenter', 
+             'pointerleave', 'mousedown', 'touchstart', 'touchmove', 
+             'touchend', 'dragstart', 'drag', 'dragend'].forEach(eventType => {
+                canvas.addEventListener(eventType, e => {
+                    e.preventDefault();
+                    e.stopPropagation();
                 }, { passive: false });
             });
         }
-    }, 500);
+    });
 </script> 
