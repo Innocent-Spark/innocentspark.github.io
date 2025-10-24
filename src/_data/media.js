@@ -4,11 +4,11 @@ const matter = require('gray-matter');
 
 module.exports = function () {
   const picsDir = path.join(__dirname, '../../pics');
-  
+
   // Load casa specifications from markdown files
   const casasDir = path.join(__dirname, '../content/casas');
   const casaSpecs = {};
-  
+
   if (fs.existsSync(casasDir)) {
     const casaFiles = fs.readdirSync(casasDir);
     casaFiles.forEach(file => {
@@ -75,7 +75,7 @@ module.exports = function () {
             // Get building specifications from loaded casa data
             const specs = casaSpecs[houseFolder];
             let buildingSpecs = {};
-            
+
             if (specs) {
               buildingSpecs = {
                 footprint: specs.footprint,
@@ -87,7 +87,7 @@ module.exports = function () {
                 grossBuiltArea2FloorsWithExtra: specs.grossBuiltArea2FloorsWithExtra,
                 isFormerMill: specs.isFormerMill
               };
-              
+
               // Remove undefined values
               Object.keys(buildingSpecs).forEach(key => {
                 if (buildingSpecs[key] === undefined) {

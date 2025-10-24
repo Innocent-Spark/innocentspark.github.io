@@ -11,8 +11,6 @@ imageFolder: pics_from_jose/Casa4
 
 # Casa 4
 
-The largest of the traditional houses, offering flexibility for single or double-story development.
-
 ## Building Options
 
 - **Building footprint:** 77.52 m²

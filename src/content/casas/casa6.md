@@ -10,8 +10,6 @@ isFormerMill: true
 
 # Casa 6 (Former Mill)
 
-A historic mill structure with unique character and compact dimensions.
-
 ## Building Options
 
 - **Building footprint:** 19.08 m²

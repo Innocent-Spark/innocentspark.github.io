@@ -9,8 +9,6 @@ imageFolder: pics_from_jose/Casa3
 
 # Casa 3
 
-A slightly larger footprint offering more space while maintaining the traditional character.
-
 ## Building Options
 
 - **Building footprint:** 29.73 m²

@@ -11,8 +11,6 @@ imageFolder: pics_from_jose/Casa5
 
 # Casa 5
 
-Another generous space with options for single or double-story renovation.
-
 ## Building Options
 
 - **Building footprint:** 73.27 m²

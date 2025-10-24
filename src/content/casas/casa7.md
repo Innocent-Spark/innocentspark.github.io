@@ -9,8 +9,6 @@ isFormerMill: true
 
 # Casa 7 (Former Mill)
 
-Another former mill building with a straightforward footprint ideal for conversion.
-
 ## Building Options
 
 - **Building footprint:** 40.19 m²

@@ -9,8 +9,6 @@ imageFolder: pics_from_jose/Casa2
 
 # Casa 2
 
-A similar size to Casa 1, this stone structure offers flexibility for renovation.
-
 ## Building Options
 
 - **Building footprint:** 23.41 m²
