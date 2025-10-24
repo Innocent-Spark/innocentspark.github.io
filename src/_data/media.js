@@ -1,8 +1,25 @@
 const fs = require('fs');
 const path = require('path');
+const matter = require('gray-matter');
 
-module.exports = function() {
+module.exports = function () {
   const picsDir = path.join(__dirname, '../../pics');
+  
+  // Load casa specifications from markdown files
+  const casasDir = path.join(__dirname, '../content/casas');
+  const casaSpecs = {};
+  
+  if (fs.existsSync(casasDir)) {
+    const casaFiles = fs.readdirSync(casasDir);
+    casaFiles.forEach(file => {
+      if (path.extname(file) === '.md') {
+        const filePath = path.join(casasDir, file);
+        const content = fs.readFileSync(filePath, 'utf8');
+        const { data } = matter(content);
+        casaSpecs[data.name] = data;
+      }
+    });
+  }
 
   // Read the directory
   const files = fs.readdirSync(picsDir);
@@ -55,62 +72,28 @@ module.exports = function() {
           houseImages.sort((a, b) => a.filename.localeCompare(b.filename, undefined, { numeric: true }));
 
           if (houseImages.length > 0) {
-            // Add building specifications based on house name
+            // Get building specifications from loaded casa data
+            const specs = casaSpecs[houseFolder];
             let buildingSpecs = {};
             
-            switch(houseFolder) {
-              case 'Casa1':
-                buildingSpecs = {
-                  footprint: 24.27,
-                  grossBuiltArea: 48.54,
-                  grossBuiltAreaWithExtra: 63.10
-                };
-                break;
-              case 'Casa2':
-                buildingSpecs = {
-                  footprint: 23.41,
-                  grossBuiltArea: 46.82,
-                  grossBuiltAreaWithExtra: 60.87
-                };
-                break;
-              case 'Casa3':
-                buildingSpecs = {
-                  footprint: 29.73,
-                  grossBuiltArea: 59.46,
-                  grossBuiltAreaWithExtra: 77.30
-                };
-                break;
-              case 'Casa4':
-                buildingSpecs = {
-                  footprint: 77.52,
-                  grossBuiltArea1Floor: 77.52,
-                  grossBuiltArea1FloorWithExtra: 100.78,
-                  grossBuiltArea2Floors: 155.04,
-                  grossBuiltArea2FloorsWithExtra: 201.56
-                };
-                break;
-              case 'Casa5':
-                buildingSpecs = {
-                  footprint: 73.27,
-                  grossBuiltArea1Floor: 73.27,
-                  grossBuiltArea1FloorWithExtra: 95.25,
-                  grossBuiltArea2Floors: 146.54,
-                  grossBuiltArea2FloorsWithExtra: 190.50
-                };
-                break;
-              case 'Casa6':
-                buildingSpecs = {
-                  footprint: 19.08,
-                  grossBuiltArea: 38.16,
-                  grossBuiltAreaWithExtra: 49.61
-                };
-                break;
-              case 'Casa7':
-                buildingSpecs = {
-                  footprint: 40.19,
-                  grossBuiltArea: 40.19
-                };
-                break;
+            if (specs) {
+              buildingSpecs = {
+                footprint: specs.footprint,
+                grossBuiltArea: specs.grossBuiltArea,
+                grossBuiltAreaWithExtra: specs.grossBuiltAreaWithExtra,
+                grossBuiltArea1Floor: specs.grossBuiltArea1Floor,
+                grossBuiltArea1FloorWithExtra: specs.grossBuiltArea1FloorWithExtra,
+                grossBuiltArea2Floors: specs.grossBuiltArea2Floors,
+                grossBuiltArea2FloorsWithExtra: specs.grossBuiltArea2FloorsWithExtra,
+                isFormerMill: specs.isFormerMill
+              };
+              
+              // Remove undefined values
+              Object.keys(buildingSpecs).forEach(key => {
+                if (buildingSpecs[key] === undefined) {
+                  delete buildingSpecs[key];
+                }
+              });
             }
 
             houses.push({

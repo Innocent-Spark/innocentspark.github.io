@@ -25,5 +25,8 @@
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
     "sharp": "^0.34.4"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
   }
 }
