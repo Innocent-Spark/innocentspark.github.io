@@ -123,6 +123,65 @@ customStyles: |
         padding-bottom: 0.5rem;
     }
 
+    /* Image Modal Styles */
+    .image-modal {
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-modal.hidden {
+        display: none;
+    }
+
+    .modal-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-image {
+        max-width: 100%;
+        max-height: 90vh;
+        object-fit: contain;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .modal-close:hover {
+        color: #16a34a;
+    }
+
+    /* Make images clickable */
+    .gallery-image {
+        cursor: pointer;
+        transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .gallery-image:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+
 ---
 
 
@@ -190,7 +249,7 @@ customStyles: |
                     
                     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         {% for image in house.images %}
-                        <img src="{{ image.path }}" alt="{{ image.alt }}" class="w-full h-auto rounded" loading="lazy">
+                        <img src="{{ image.path }}" alt="{{ image.alt }}" class="w-full h-auto rounded cursor-pointer hover:opacity-90 transition-opacity gallery-image" loading="lazy">
                         {% endfor %}
                     </div>
                 </div>
@@ -204,7 +263,7 @@ customStyles: |
             <h3 class="text-xl font-semibold mb-3">General Photos</h3>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {% for image in media.images %}
-                <img src="{{ image.path }}" alt="{{ image.alt }}" class="w-full h-auto rounded" loading="lazy">
+                <img src="{{ image.path }}" alt="{{ image.alt }}" class="w-full h-auto rounded cursor-pointer hover:opacity-90 transition-opacity gallery-image" loading="lazy">
                 {% endfor %}
             </div>
         </div>
@@ -231,8 +290,54 @@ customStyles: |
     </section>
 </main>
 
+<!-- Image Modal -->
+<div id="imageModal" class="image-modal hidden">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <img class="modal-image" id="modalImage" src="" alt="">
+    </div>
+</div>
+
 <footer class="bg-gray-800 text-white py-4">
     <div class="container mx-auto px-4 text-center">
         <!-- <p>&copy; 2024 Portuguese Riverside Co-Living Project. All Rights Reserved.</p> -->
     </div>
-</footer> 
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeButton = document.querySelector('.modal-close');
+    
+    // Add click event to all gallery images
+    const galleryImages = document.querySelectorAll('.gallery-image');
+    
+    galleryImages.forEach(img => {
+        img.addEventListener('click', function() {
+            modal.classList.remove('hidden');
+            modalImage.src = this.src;
+            modalImage.alt = this.alt;
+        });
+    });
+    
+    // Close modal when clicking the X
+    closeButton.addEventListener('click', function() {
+        modal.classList.add('hidden');
+    });
+    
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal || e.target === modal.querySelector('.modal-content')) {
+            modal.classList.add('hidden');
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+            modal.classList.add('hidden');
+        }
+    });
+});
+</script> 
