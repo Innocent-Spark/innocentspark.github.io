@@ -1,0 +1,65 @@
+---
+layout: base.njk
+title: Innocent Spark UG
+bodyClass: "homepage"
+scripts:
+  - /script.js
+externalStyles:
+  - https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
+customStyles: |
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    @media (max-width: 768px) {
+        body.homepage {
+            overflow: visible;
+        }
+    }
+
+    .legalinfo {
+        z-index: 1000;
+        background-color: white;
+        position: absolute;
+        padding: 14px;
+        color: rgb(124, 51, 124);
+        border: 2px solid pink;
+        box-shadow: 0px 0px 10px #000000;
+    }
+    
+    .legalinfo a {
+        color: #72337c;
+        text-decoration: underline;
+    }
+---
+<div class="experience"></div>
+<div></div>
+
+<div class="legalinfo">
+    <p>Innocent Spark UG</p>
+    <p>Friedrich Franz Str 35, 12103 Berlin</p>
+    <p>29/359/30168</p>
+    <p>HRB248765B</p>
+    <p>Managing Director: Joseph Finlayson</p>
+    <p><a href="mailto:joseph@innocentspark.com">joseph@innocentspark.com</a></p>
+    <p><a href="tel:+4917698455845">+49-176-98455845</a></p>
+    <p><a href="/portugal/">Portugal Project</a></p>
+</div>
+
+<script>
+    // Prevent scrolling conflicts with 3D canvas
+    window.addEventListener('DOMContentLoaded', () => {
+        const canvas = document.querySelector('canvas');
+        if (canvas) {
+            ['pointerdown', 'pointerup', 'pointerout', 'pointerenter', 
+             'pointerleave', 'mousedown', 'touchstart', 'touchmove', 
+             'touchend', 'dragstart', 'drag', 'dragend'].forEach(eventType => {
+                canvas.addEventListener(eventType, e => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }, { passive: false });
+            });
+        }
+    });
+</script> 

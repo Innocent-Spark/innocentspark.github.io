@@ -1,0 +1,6 @@
+---
+description: Auto commit
+globs: 
+alwaysApply: true
+---
+after every code update, write a meaningful commit message and push it

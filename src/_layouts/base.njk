@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    {% if customStyles %}
+    <style>
+        {{ customStyles | safe }}
+    </style>
+    {% endif %}
+    {% if externalStyles %}
+    {% for style in externalStyles %}
+    <link href="{{ style }}" rel="stylesheet">
+    {% endfor %}
+    {% endif %}
+    <link href="/style.css" rel="stylesheet">
+</head>
+<body class="{{ bodyClass }}">
+    {{ content | safe }}
+    
+    {% if page.url == "/" and scripts %}
+    {% for script in scripts %}
+    <script src="{{ script }}" defer></script>
+    {% endfor %}
+    {% endif %}
+    
+    {% if page.url != "/" and pageScripts %}
+    {% for script in pageScripts %}
+    <script src="{{ script }}"></script>
+    {% endfor %}
+    {% endif %}
+</body>
+</html> 

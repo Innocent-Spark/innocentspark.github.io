@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^portugal\.html$ /portugal/ [R=301,L] 

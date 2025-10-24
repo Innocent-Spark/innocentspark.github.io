@@ -1,0 +1,29 @@
+{
+  "name": "innocentspark.github.io",
+  "version": "1.0.0",
+  "description": "Innocent Spark website",
+  "main": "script.js",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "clean": "rm -rf _site",
+    "test": "echo \"No tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Innocent-Spark/innocentspark.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Innocent-Spark/innocentspark.github.io/issues"
+  },
+  "homepage": "https://github.com/Innocent-Spark/innocentspark.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0",
+    "sharp": "^0.34.4"
+  }
+}
