@@ -63,42 +63,21 @@ module.exports = function() {
                 buildingSpecs = {
                   footprint: 24.27,
                   grossBuiltArea: 48.54,
-                  grossBuiltAreaWithExtra: 63.10,
-                  estimatedCost: 126200,
-                  constructionPhases: {
-                    survey: 9000,
-                    architecturalSurvey: 3000,
-                    preApplication: 4000,
-                    conceptDesign: 1000
-                  }
+                  grossBuiltAreaWithExtra: 63.10
                 };
                 break;
               case 'Casa2':
                 buildingSpecs = {
                   footprint: 23.41,
                   grossBuiltArea: 46.82,
-                  grossBuiltAreaWithExtra: 60.87,
-                  estimatedCost: 121740,
-                  constructionPhases: {
-                    survey: 9000,
-                    architecturalSurvey: 3000,
-                    preApplication: 4000,
-                    conceptDesign: 1000
-                  }
+                  grossBuiltAreaWithExtra: 60.87
                 };
                 break;
               case 'Casa3':
                 buildingSpecs = {
                   footprint: 29.73,
                   grossBuiltArea: 59.46,
-                  grossBuiltAreaWithExtra: 77.30,
-                  estimatedCost: 154600,
-                  constructionPhases: {
-                    survey: 9000,
-                    architecturalSurvey: 3000,
-                    preApplication: 4000,
-                    conceptDesign: 1000
-                  }
+                  grossBuiltAreaWithExtra: 77.30
                 };
                 break;
               case 'Casa4':
@@ -107,19 +86,7 @@ module.exports = function() {
                   grossBuiltArea1Floor: 77.52,
                   grossBuiltArea1FloorWithExtra: 100.78,
                   grossBuiltArea2Floors: 155.04,
-                  grossBuiltArea2FloorsWithExtra: 201.56,
-                  estimatedCosts: {
-                    oneFloor: 155040,
-                    oneFloorWithExtra: 201560,
-                    twoFloors: 301080,
-                    twoFloorsWithExtra: 403120
-                  },
-                  constructionPhases: {
-                    survey: 9000,
-                    architecturalSurvey: 3000,
-                    preApplication: 4000,
-                    conceptDesign: 1000
-                  }
+                  grossBuiltArea2FloorsWithExtra: 201.56
                 };
                 break;
               case 'Casa5':
@@ -128,49 +95,20 @@ module.exports = function() {
                   grossBuiltArea1Floor: 73.27,
                   grossBuiltArea1FloorWithExtra: 95.25,
                   grossBuiltArea2Floors: 146.54,
-                  grossBuiltArea2FloorsWithExtra: 190.50,
-                  estimatedCosts: {
-                    oneFloor: 146540,
-                    oneFloorWithExtra: 190500,
-                    twoFloors: 293080,
-                    twoFloorsWithExtra: 381000
-                  },
-                  constructionPhases: {
-                    survey: 9000,
-                    architecturalSurvey: 3000,
-                    preApplication: 4000,
-                    conceptDesign: 1000
-                  }
+                  grossBuiltArea2FloorsWithExtra: 190.50
                 };
                 break;
               case 'Casa6':
                 buildingSpecs = {
                   footprint: 19.08,
                   grossBuiltArea: 38.16,
-                  grossBuiltAreaWithExtra: 49.61,
-                  estimatedCosts: {
-                    standard: 76320,
-                    withExtra: 99220
-                  },
-                  constructionPhases: {
-                    survey: 6000,
-                    architecturalSurvey: 3000,
-                    preApplication: 3000,
-                    conceptDesign: 1000
-                  }
+                  grossBuiltAreaWithExtra: 49.61
                 };
                 break;
               case 'Casa7':
                 buildingSpecs = {
                   footprint: 40.19,
-                  grossBuiltArea: 40.19,
-                  estimatedCost: 80380,
-                  constructionPhases: {
-                    survey: 6000,
-                    architecturalSurvey: 3000,
-                    preApplication: 3000,
-                    conceptDesign: 1000
-                  }
+                  grossBuiltArea: 40.19
                 };
                 break;
             }

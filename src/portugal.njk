@@ -123,23 +123,6 @@ customStyles: |
         padding-bottom: 0.5rem;
     }
 
-    .construction-phases {
-        margin-top: 1rem;
-        padding-top: 1rem;
-        border-top: 1px solid #e5e7eb;
-    }
-
-    .construction-phases .grid > div {
-        background: white;
-        border: 1px solid #d1d5db;
-        border-radius: 0.375rem;
-        transition: all 0.2s ease;
-    }
-
-    .construction-phases .grid > div:hover {
-        border-color: #16a34a;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    }
 ---
 
 
@@ -175,80 +158,32 @@ customStyles: |
                     <div class="building-specs mb-6 p-4 bg-gray-50 rounded-lg">
                         <h4 class="text-lg font-semibold mb-3 text-green-600">Building Specifications</h4>
                         
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                            <div>
-                                <p><strong>Building footprint:</strong> {{ house.buildingSpecs.footprint }} m²</p>
-                                
-                                {% if house.buildingSpecs.grossBuiltArea %}
-                                <p><strong>Gross built area:</strong> {{ house.buildingSpecs.grossBuiltArea }} m²</p>
-                                {% endif %}
-                                
-                                {% if house.buildingSpecs.grossBuiltAreaWithExtra %}
-                                <p><strong>Gross built area with extra 30%:</strong> {{ house.buildingSpecs.grossBuiltAreaWithExtra }} m²</p>
-                                {% endif %}
-                                
-                                {% if house.buildingSpecs.grossBuiltArea1Floor %}
-                                <p><strong>Gross built area option 1 floor:</strong> {{ house.buildingSpecs.grossBuiltArea1Floor }} m²</p>
-                                {% endif %}
-                                
-                                {% if house.buildingSpecs.grossBuiltArea1FloorWithExtra %}
-                                <p><strong>Gross built area with extra 30%:</strong> {{ house.buildingSpecs.grossBuiltArea1FloorWithExtra }} m²</p>
-                                {% endif %}
-                                
-                                {% if house.buildingSpecs.grossBuiltArea2Floors %}
-                                <p><strong>Gross built area option 2 floors:</strong> {{ house.buildingSpecs.grossBuiltArea2Floors }} m²</p>
-                                {% endif %}
-                                
-                                {% if house.buildingSpecs.grossBuiltArea2FloorsWithExtra %}
-                                <p><strong>Gross built area with extra 30%:</strong> {{ house.buildingSpecs.grossBuiltArea2FloorsWithExtra }} m²</p>
-                                {% endif %}
-                            </div>
+                        <div class="space-y-2">
+                            <p><strong>Building footprint:</strong> {{ house.buildingSpecs.footprint }} m²</p>
                             
-                            <div>
-                                <h5 class="font-semibold mb-2">Estimated Building Costs:</h5>
-                                {% if house.buildingSpecs.estimatedCost %}
-                                <p><strong>Total cost:</strong> €{{ house.buildingSpecs.estimatedCost.toLocaleString() }}</p>
-                                {% endif %}
-                                
-                                {% if house.buildingSpecs.estimatedCosts %}
-                                    {% if house.buildingSpecs.estimatedCosts.oneFloor %}
-                                    <p><strong>1 floor:</strong> €{{ house.buildingSpecs.estimatedCosts.oneFloor.toLocaleString() }}</p>
-                                    {% endif %}
-                                    {% if house.buildingSpecs.estimatedCosts.oneFloorWithExtra %}
-                                    <p><strong>1 floor + 30%:</strong> €{{ house.buildingSpecs.estimatedCosts.oneFloorWithExtra.toLocaleString() }}</p>
-                                    {% endif %}
-                                    {% if house.buildingSpecs.estimatedCosts.twoFloors %}
-                                    <p><strong>2 floors:</strong> €{{ house.buildingSpecs.estimatedCosts.twoFloors.toLocaleString() }}</p>
-                                    {% endif %}
-                                    {% if house.buildingSpecs.estimatedCosts.twoFloorsWithExtra %}
-                                    <p><strong>2 floors + 30%:</strong> €{{ house.buildingSpecs.estimatedCosts.twoFloorsWithExtra.toLocaleString() }}</p>
-                                    {% endif %}
-                                    {% if house.buildingSpecs.estimatedCosts.standard %}
-                                    <p><strong>Standard:</strong> €{{ house.buildingSpecs.estimatedCosts.standard.toLocaleString() }}</p>
-                                    {% endif %}
-                                    {% if house.buildingSpecs.estimatedCosts.withExtra %}
-                                    <p><strong>With 30% extra:</strong> €{{ house.buildingSpecs.estimatedCosts.withExtra.toLocaleString() }}</p>
-                                    {% endif %}
-                                {% endif %}
-                            </div>
-                        </div>
-                        
-                        <div class="construction-phases">
-                            <h5 class="font-semibold mb-2">Construction Phases:</h5>
-                            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
-                                <div class="bg-white p-2 rounded border">
-                                    <strong>Survey:</strong> €{{ house.buildingSpecs.constructionPhases.survey.toLocaleString() }}
-                                </div>
-                                <div class="bg-white p-2 rounded border">
-                                    <strong>Arch. Survey:</strong> €{{ house.buildingSpecs.constructionPhases.architecturalSurvey.toLocaleString() }}
-                                </div>
-                                <div class="bg-white p-2 rounded border">
-                                    <strong>Pre-Application:</strong> €{{ house.buildingSpecs.constructionPhases.preApplication.toLocaleString() }}
-                                </div>
-                                <div class="bg-white p-2 rounded border">
-                                    <strong>Concept Design:</strong> €{{ house.buildingSpecs.constructionPhases.conceptDesign.toLocaleString() }}
-                                </div>
-                            </div>
+                            {% if house.buildingSpecs.grossBuiltArea %}
+                            <p><strong>Gross built area:</strong> {{ house.buildingSpecs.grossBuiltArea }} m²</p>
+                            {% endif %}
+                            
+                            {% if house.buildingSpecs.grossBuiltAreaWithExtra %}
+                            <p><strong>Gross built area with extra 30%:</strong> {{ house.buildingSpecs.grossBuiltAreaWithExtra }} m²</p>
+                            {% endif %}
+                            
+                            {% if house.buildingSpecs.grossBuiltArea1Floor %}
+                            <p><strong>Gross built area option 1 floor:</strong> {{ house.buildingSpecs.grossBuiltArea1Floor }} m²</p>
+                            {% endif %}
+                            
+                            {% if house.buildingSpecs.grossBuiltArea1FloorWithExtra %}
+                            <p><strong>Gross built area with extra 30%:</strong> {{ house.buildingSpecs.grossBuiltArea1FloorWithExtra }} m²</p>
+                            {% endif %}
+                            
+                            {% if house.buildingSpecs.grossBuiltArea2Floors %}
+                            <p><strong>Gross built area option 2 floors:</strong> {{ house.buildingSpecs.grossBuiltArea2Floors }} m²</p>
+                            {% endif %}
+                            
+                            {% if house.buildingSpecs.grossBuiltArea2FloorsWithExtra %}
+                            <p><strong>Gross built area with extra 30%:</strong> {{ house.buildingSpecs.grossBuiltArea2FloorsWithExtra }} m²</p>
+                            {% endif %}
                         </div>
                     </div>
                     {% endif %}
