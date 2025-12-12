@@ -2,38 +2,14 @@
 layout: base.njk
 title: Values - Portuguese Riverside Co-Living Project
 permalink: /portugal/values/
-bodyClass: "bg-gray-100 text-gray-900"
+bodyClass: "bg-stone-50 text-gray-800"
 externalStyles:
   - https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
+  - https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap
 pageScripts: []
 customStyles: |
-    section p {
-        margin-bottom: 1rem;
-    }
-
-    section h1 {
-        font-size: 1.875rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 0.75rem;
-        margin-top: 1.5rem;
-    }
-
-    section h3 {
-        font-size: 1.25rem;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-        margin-top: 1rem;
-    }
-
-    section a {
-        color: #16a34a;
-        text-decoration: underline;
+    body {
+        font-family: 'Inter', system-ui, sans-serif;
     }
 
     .tab-nav {
@@ -64,46 +40,160 @@ customStyles: |
         font-weight: 600;
     }
 
-    .value-item {
+    .hero-section {
+        background: linear-gradient(135deg, #166534 0%, #15803d 50%, #22c55e 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .value-card {
         background: white;
-        border-radius: 0.5rem;
-        padding: 1.5rem;
+        border-radius: 1rem;
+        padding: 2rem;
         margin-bottom: 1.5rem;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        border: 1px solid #e7e5e4;
+        transition: all 0.3s ease;
     }
 
-    .value-item h2 {
-        color: #16a34a;
-        margin-top: 0;
+    .value-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+        transform: translateY(-2px);
     }
 
-    .example {
-        background: #f0fdf4;
-        border-left: 4px solid #16a34a;
-        padding: 1rem;
-        margin: 1rem 0;
-        border-radius: 0 0.25rem 0.25rem 0;
+    .value-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        background: linear-gradient(135deg, #166534, #22c55e);
+        color: white;
+        font-weight: 700;
+        font-size: 1rem;
+        border-radius: 0.75rem;
+        margin-right: 1rem;
+        flex-shrink: 0;
     }
 
-    .counterexample {
-        background: #fef2f2;
-        border-left: 4px solid #dc2626;
-        padding: 1rem;
-        margin: 1rem 0;
-        border-radius: 0 0.25rem 0.25rem 0;
+    .value-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1c1917;
+        line-height: 1.4;
     }
 
-    .example strong, .counterexample strong {
-        display: block;
-        margin-bottom: 0.5rem;
+    .value-description {
+        color: #57534e;
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin: 1rem 0 1.5rem 0;
+    }
+
+    .examples-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        .examples-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .example-box {
+        padding: 1.25rem;
+        border-radius: 0.75rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .example-box.positive {
+        background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        border: 1px solid #bbf7d0;
+    }
+
+    .example-box.negative {
+        background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+        border: 1px solid #fecaca;
+    }
+
+    .example-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.75rem;
+    }
+
+    .example-box.positive .example-label {
+        color: #166534;
+    }
+
+    .example-box.negative .example-label {
+        color: #991b1b;
+    }
+
+    .example-text {
+        color: #44403c;
+    }
+
+    .subvalue {
+        background: #fafaf9;
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+        border: 1px solid #e7e5e4;
+    }
+
+    .subvalue-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #166534;
+        margin-bottom: 0.75rem;
+    }
+
+    .intro-text {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: #57534e;
+        max-width: 48rem;
+    }
+
+    .draft-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255,255,255,0.2);
+        backdrop-filter: blur(4px);
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: white;
+        border: 1px solid rgba(255,255,255,0.3);
     }
 
 ---
 
-<header class="bg-green-600 text-white py-6">
-    <div class="container mx-auto px-4">
+<header class="hero-section text-white py-8">
+    <div class="container mx-auto px-4 relative z-10">
         <h1 class="text-3xl font-bold">{{ portugal.meta.title }}</h1>
-        <p class="mt-2">{{ portugal.meta.headerText | markdown | safe }}</p>
+        <p class="mt-2 opacity-90">{{ portugal.meta.headerText | markdown | safe }}</p>
         <nav class="tab-nav">
             <a href="/portugal/">Overview</a>
             <a href="/portugal/values/" class="active">Values</a>
@@ -111,208 +201,383 @@ customStyles: |
     </div>
 </header>
 
-<main class="container mx-auto px-4 py-8">
-    <section>
-        <h1>Values Manifesto</h1>
-        <p class="text-gray-600 italic mb-6">Nodar Intentional Community — Draft</p>
+<main class="container mx-auto px-4 py-12 max-w-4xl">
 
-        <div class="value-item">
-            <h2>1. Purpose</h2>
-            <p>We counteract the loneliness and monotony of isolated nuclear-family life through structured proximity: a stable core plus a rotating outer ring.</p>
-            <div class="example">
-                <strong>Example:</strong>
-                A core resident hosts a weekly open workshop hour where visitors join casually—no obligation, just structured social texture. You send to the WhatsApp group - fancy going fishing? You go fishing with some of the residents.
+    <div class="text-center mb-12">
+        <span class="draft-badge" style="background: #166534;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+            Draft Document
+        </span>
+        <h1 class="text-4xl font-bold text-stone-800 mt-6 mb-4">Values Manifesto</h1>
+        <p class="intro-text mx-auto">
+            These principles guide how we live together at Nodar. They're not rules to enforce,
+            but shared expectations that help the community thrive.
+        </p>
+    </div>
+
+    <div class="value-card">
+        <div class="flex items-start">
+            <span class="value-number">1</span>
+            <h2 class="value-title">Purpose</h2>
+        </div>
+        <p class="value-description">We counteract the loneliness and monotony of isolated nuclear-family life through structured proximity: a stable core plus a rotating outer ring.</p>
+        <div class="examples-grid">
+            <div class="example-box positive">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    This
+                </div>
+                <p class="example-text">A core resident hosts a weekly open workshop hour where visitors join casually—no obligation, just structured social texture. You send to the WhatsApp group - fancy going fishing? You go fishing with some of the residents.</p>
             </div>
-            <div class="counterexample">
-                <strong>Counterexample:</strong>
-                Expecting everyone to attend social events "for cohesion." 21st of March is fishing day - everyone is expected to go fishing.
+            <div class="example-box negative">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                    Not this
+                </div>
+                <p class="example-text">Expecting everyone to attend social events "for cohesion." 21st of March is fishing day - everyone is expected to go fishing.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="value-card">
+        <div class="flex items-start">
+            <span class="value-number">2</span>
+            <h2 class="value-title">Scientific Stewardship</h2>
+        </div>
+        <p class="value-description">Six houses on fourteen acres require active, evidence-based land management.</p>
+        <div class="examples-grid">
+            <div class="example-box positive">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    This
+                </div>
+                <p class="example-text">Remove an invasive eucalyptus cluster using fire-risk modeling; replant natives.</p>
+            </div>
+            <div class="example-box negative">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                    Not this
+                </div>
+                <p class="example-text">Ignoring wild-boar overpopulation because "nature should self-correct," despite clear ecological damage.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="value-card">
+        <div class="flex items-start">
+            <span class="value-number">3</span>
+            <h2 class="value-title">Experimental Mindset</h2>
+        </div>
+        <p class="value-description">High tolerance for technical and scientific experimentation.</p>
+        <div class="examples-grid">
+            <div class="example-box positive">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    This
+                </div>
+                <p class="example-text">Running a micro-lab trial for engineered fungi with basic controls and logs.</p>
+            </div>
+            <div class="example-box negative">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                    Not this
+                </div>
+                <p class="example-text">Blocking experiments because someone claims experiments "disturb the land's energy."</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="value-card">
+        <div class="flex items-start">
+            <span class="value-number">4</span>
+            <h2 class="value-title">Competent Cooperation</h2>
+        </div>
+        <p class="value-description">Adults coordinating cleanly; collaboration optional but respected. We follow through.</p>
+        <div class="examples-grid">
+            <div class="example-box positive">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    This
+                </div>
+                <p class="example-text">Two residents coordinate a trench repair via a quick, efficient task list. Three residents decide they want to repair a dry stone wall. Over a few weeks of casual labour, they finish. Other residents organise a bbq to celebrate.</p>
+            </div>
+            <div class="example-box negative">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                    Not this
+                </div>
+                <p class="example-text">Guilt-tripping someone for not joining a project they never volunteered for. You agree to be there on Saturday to meet the concrete truck, you don't show up.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="value-card">
+        <div class="flex items-start">
+            <span class="value-number">5</span>
+            <h2 class="value-title">Shared Aesthetic With Space for Experimentation</h2>
+        </div>
+        <p class="value-description">Unifying look for visible structures but full creative freedom inside units and workshop zones.</p>
+        <div class="examples-grid">
+            <div class="example-box positive">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    This
+                </div>
+                <p class="example-text">Matching roofs and facades while someone builds a weird, brilliant bioreactor in their workshop.</p>
+            </div>
+            <div class="example-box negative">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                    Not this
+                </div>
+                <p class="example-text">Painting a communal-facing exterior neon colors "because personal expression."</p>
             </div>
         </div>
 
-        <div class="value-item">
-            <h2>2. Scientific Stewardship</h2>
-            <p>Six houses on fourteen acres require active, evidence-based land management.</p>
-            <div class="example">
-                <strong>Example:</strong>
-                Remove an invasive eucalyptus cluster using fire-risk modeling; replant natives.
-            </div>
-            <div class="counterexample">
-                <strong>Counterexample:</strong>
-                Ignoring wild-boar overpopulation because "nature should self-correct," despite clear ecological damage.
-            </div>
-        </div>
-
-        <div class="value-item">
-            <h2>3. Experimental Mindset</h2>
-            <p>High tolerance for technical and scientific experimentation.</p>
-            <div class="example">
-                <strong>Example:</strong>
-                Running a micro-lab trial for engineered fungi with basic controls and logs.
-            </div>
-            <div class="counterexample">
-                <strong>Counterexample:</strong>
-                Blocking experiments because someone claims experiments "disturb the land's energy."
+        <div class="subvalue">
+            <h3 class="subvalue-title">5b. Sustainable Natural Materials</h3>
+            <p class="value-description" style="margin-bottom: 1rem;">An emphasis on sustainable natural materials in the external built environment. Houses and other construction should not drift too far from local construction norms, be built to last. Construction should blend in with the landscape and conform with local laws.</p>
+            <div class="examples-grid">
+                <div class="example-box positive">
+                    <div class="example-label">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                        This
+                    </div>
+                    <p class="example-text">Stone houses, slate roofs, wood/adobe details, but with a hypermodern aesthetic and full air con internally.</p>
+                </div>
+                <div class="example-box negative">
+                    <div class="example-label">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                        Not this
+                    </div>
+                    <p class="example-text">Attempting to spray paint a mural on the side of your building, that spends most summers peeling off.</p>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="value-item">
-            <h2>4. Competent Cooperation</h2>
-            <p>Adults coordinating cleanly; collaboration optional but respected. We follow through.</p>
-            <div class="example">
-                <strong>Example:</strong>
-                Two residents coordinate a trench repair via a quick, efficient task list. Three residents decide they want to repair a dry stone wall. Over a few weeks of casual labour, they finish. Other residents organise a bbq to celebrate.
+    <div class="value-card">
+        <div class="flex items-start">
+            <span class="value-number">6</span>
+            <h2 class="value-title">Medium Order and Predictable Norms</h2>
+        </div>
+        <p class="value-description">Shared spaces clean and stable; noise, tools, and routines predictable but not oppressive.</p>
+        <div class="examples-grid">
+            <div class="example-box positive">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    This
+                </div>
+                <p class="example-text">Quiet hours after 10 p.m.; shared tools returned to the rack each evening.</p>
             </div>
-            <div class="counterexample">
-                <strong>Counterexample:</strong>
-                Guilt-tripping someone for not joining a project they never volunteered for. You agree to be there on Saturday to meet the concrete truck, you don't show up.
+            <div class="example-box negative">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                    Not this
+                </div>
+                <p class="example-text">Blasting music at midnight or leaving power tools scattered for days.</p>
             </div>
         </div>
+    </div>
 
-        <div class="value-item">
-            <h2>5. Shared Aesthetic With Space for Experimentation</h2>
-            <p>Unifying look for visible structures but full creative freedom inside units and workshop zones.</p>
-            <div class="example">
-                <strong>Example:</strong>
-                Matching roofs and facades while someone builds a weird, brilliant bioreactor in their workshop.
+    <div class="value-card">
+        <div class="flex items-start">
+            <span class="value-number">7</span>
+            <h2 class="value-title">Boundaries and Autonomy</h2>
+        </div>
+        <p class="value-description">No dietary evangelism, lifestyle coercion, or pressured emotional disclosure.</p>
+        <div class="examples-grid">
+            <div class="example-box positive">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    This
+                </div>
+                <p class="example-text">Someone cooks vegan, someone cooks carnivore, and neither comments on the other. Fishing from the river is permitted if done respectfully.</p>
             </div>
-            <div class="counterexample">
-                <strong>Counterexample:</strong>
-                Painting a communal-facing exterior neon colors "because personal expression."
-            </div>
-
-            <h3>5b. Sustainable Natural Materials</h3>
-            <p>An emphasis on sustainable natural materials in the external built environment. Houses and other construction should not drift too far from local construction norms, be built to last. Construction should blend in with the landscape and conform with local laws.</p>
-            <div class="example">
-                <strong>Example:</strong>
-                Stone houses, slate roofs, wood/adobe details, but with a hypermodern aesthetic and full air con internally.
-            </div>
-            <div class="counterexample">
-                <strong>Counterexample:</strong>
-                Attempting to spray paint a mural on the side of your building, that spends most summers peeling off.
+            <div class="example-box negative">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                    Not this
+                </div>
+                <p class="example-text">Pressuring residents to "eat cleaner" or to "open up emotionally for the group." Skinning and butchering a wild boar in a common area (even outside).</p>
             </div>
         </div>
+    </div>
 
-        <div class="value-item">
-            <h2>6. Medium Order and Predictable Norms</h2>
-            <p>Shared spaces clean and stable; noise, tools, and routines predictable but not oppressive.</p>
-            <div class="example">
-                <strong>Example:</strong>
-                Quiet hours after 10 p.m.; shared tools returned to the rack each evening.
+    <div class="value-card">
+        <div class="flex items-start">
+            <span class="value-number">8</span>
+            <h2 class="value-title">Civic Participation Without Enforced Intimacy</h2>
+        </div>
+        <p class="value-description">Discussions focus on land, infrastructure, governance—not personal revelation.</p>
+        <div class="examples-grid">
+            <div class="example-box positive">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    This
+                </div>
+                <p class="example-text">A meeting debates irrigation strategy and caretaker hours.</p>
             </div>
-            <div class="counterexample">
-                <strong>Counterexample:</strong>
-                Blasting music at midnight or leaving power tools scattered for days.
+            <div class="example-box negative">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                    Not this
+                </div>
+                <p class="example-text">A meeting derails into people being asked to share childhood trauma to "clear blockages."</p>
             </div>
         </div>
+    </div>
 
-        <div class="value-item">
-            <h2>7. Boundaries and Autonomy</h2>
-            <p>No dietary evangelism, lifestyle coercion, or pressured emotional disclosure.</p>
-            <div class="example">
-                <strong>Example:</strong>
-                Someone cooks vegan, someone cooks carnivore, and neither comments on the other. Fishing from the river is permitted if done respectfully.
+    <div class="value-card">
+        <div class="flex items-start">
+            <span class="value-number">9</span>
+            <h2 class="value-title">Medium Interdependence</h2>
+        </div>
+        <p class="value-description">Shared tools, shared infrastructure funds, sovereign private units.</p>
+        <div class="examples-grid">
+            <div class="example-box positive">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    This
+                </div>
+                <p class="example-text">Everyone uses the shared chipper; each household maintains its own finances. 3 people collectively buy a pizza oven, one person decides not to. This is fine.</p>
             </div>
-            <div class="counterexample">
-                <strong>Counterexample:</strong>
-                Pressuring residents to "eat cleaner" or to "open up emotionally for the group." Skinning and butchering a wild boar in a common area (even outside).
+            <div class="example-box negative">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                    Not this
+                </div>
+                <p class="example-text">Expecting residents to pool groceries or justify private purchases.</p>
             </div>
         </div>
+    </div>
 
-        <div class="value-item">
-            <h2>8. Civic Participation Without Enforced Intimacy</h2>
-            <p>Discussions focus on land, infrastructure, governance—not personal revelation.</p>
-            <div class="example">
-                <strong>Example:</strong>
-                A meeting debates irrigation strategy and caretaker hours.
+    <div class="value-card">
+        <div class="flex items-start">
+            <span class="value-number">10</span>
+            <h2 class="value-title">High Permeability</h2>
+        </div>
+        <p class="value-description">Visitors, collaborators, seasonal tenants welcomed; novelty flows around a stable core.</p>
+        <div class="examples-grid">
+            <div class="example-box positive">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    This
+                </div>
+                <p class="example-text">Hosting a two-week workshop on soil regeneration without disrupting core routines.</p>
             </div>
-            <div class="counterexample">
-                <strong>Counterexample:</strong>
-                A meeting derails into people being asked to share childhood trauma to "clear blockages."
+            <div class="example-box negative">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                    Not this
+                </div>
+                <p class="example-text">Closing the community to outsiders because "too many new faces feel unsafe." Inviting 20 people to camp and have a music festival on the shared terrace.</p>
             </div>
         </div>
+    </div>
 
-        <div class="value-item">
-            <h2>9. Medium Interdependence</h2>
-            <p>Shared tools, shared infrastructure funds, sovereign private units.</p>
-            <div class="example">
-                <strong>Example:</strong>
-                Everyone uses the shared chipper; each household maintains its own finances. 3 people collectively buy a pizza oven, one person decides not to. This is fine.
+    <div class="value-card">
+        <div class="flex items-start">
+            <span class="value-number">11</span>
+            <h2 class="value-title">Public Identity: Factual and Practical</h2>
+        </div>
+        <p class="value-description">We are not a cult. We don't think this is the best way of living and we are not part of an ideological movement. We share our foundational documents to help others form communities, not to preach.</p>
+        <div class="examples-grid">
+            <div class="example-box positive">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    This
+                </div>
+                <p class="example-text">Sharing this document, an overview of our legal structures, and our building plan.</p>
             </div>
-            <div class="counterexample">
-                <strong>Counterexample:</strong>
-                Expecting residents to pool groceries or justify private purchases.
+            <div class="example-box negative">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                    Not this
+                </div>
+                <p class="example-text">Claiming the modern world is broken and a return to nature is the only way to find happiness. In a 3000 word missive written by Moon Peacebird (formerly called Bob). Sharing detailed day-to-day documents like the caretaker plan and/or meeting minutes.</p>
             </div>
         </div>
+    </div>
 
-        <div class="value-item">
-            <h2>10. High Permeability</h2>
-            <p>Visitors, collaborators, seasonal tenants welcomed; novelty flows around a stable core.</p>
-            <div class="example">
-                <strong>Example:</strong>
-                Hosting a two-week workshop on soil regeneration without disrupting core routines.
+    <div class="value-card">
+        <div class="flex items-start">
+            <span class="value-number">12</span>
+            <h2 class="value-title">Medium Professionalization Using Digital Tools</h2>
+        </div>
+        <p class="value-description">Clear roles, caretaker contract, written norms; low bureaucracy.</p>
+        <div class="examples-grid">
+            <div class="example-box positive">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    This
+                </div>
+                <p class="example-text">Caretaker logs weekly tasks; residents use a simple system for shared decisions.</p>
             </div>
-            <div class="counterexample">
-                <strong>Counterexample:</strong>
-                Closing the community to outsiders because "too many new faces feel unsafe." Inviting 20 people to camp and have a music festival on the shared terrace.
+            <div class="example-box negative">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                    Not this
+                </div>
+                <p class="example-text">Creating committees for everything, or having zero defined responsibilities.</p>
             </div>
         </div>
+    </div>
 
-        <div class="value-item">
-            <h2>11. Public Identity: Factual and Practical</h2>
-            <p>We are not a cult. We don't think this is the best way of living and we are not part of an ideological movement. We share our foundational documents to help others form communities, not to preach.</p>
-            <div class="example">
-                <strong>Example:</strong>
-                Sharing this document, an overview of our legal structures, and our building plan.
+    <div class="value-card">
+        <div class="flex items-start">
+            <span class="value-number">13</span>
+            <h2 class="value-title">Stability Over Churn</h2>
+        </div>
+        <p class="value-description">Core residents commit to multi-year arcs. Houses need to be lived in. By signing up to this project you commit to be resident at least a few months a year.</p>
+        <div class="examples-grid">
+            <div class="example-box positive">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    This
+                </div>
+                <p class="example-text">A resident commits to a five-year stay with periodic travel.</p>
             </div>
-            <div class="counterexample">
-                <strong>Counterexample:</strong>
-                Claiming the modern world is broken and a return to nature is the only way to find happiness. In a 3000 word missive written by Moon Peacebird (formerly called Bob). Sharing detailed day-to-day documents like the caretaker plan and/or meeting minutes.
+            <div class="example-box negative">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                    Not this
+                </div>
+                <p class="example-text">You agree to be there in the rainy months (i.e. Dec, Jan) but you don't turn up without organising a caretaker from the local community.</p>
             </div>
         </div>
+    </div>
 
-        <div class="value-item">
-            <h2>12. Medium Professionalization Using Digital Tools</h2>
-            <p>Clear roles, caretaker contract, written norms; low bureaucracy.</p>
-            <div class="example">
-                <strong>Example:</strong>
-                Caretaker logs weekly tasks; residents use a simple system for shared decisions.
+    <div class="value-card">
+        <div class="flex items-start">
+            <span class="value-number">14</span>
+            <h2 class="value-title">Medium Economic Integration</h2>
+        </div>
+        <p class="value-description">Separate household finances with a shared infrastructure fund.</p>
+        <div class="examples-grid">
+            <div class="example-box positive">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    This
+                </div>
+                <p class="example-text">Each household pays into a maintenance/caretaker fund annually.</p>
             </div>
-            <div class="counterexample">
-                <strong>Counterexample:</strong>
-                Creating committees for everything, or having zero defined responsibilities.
+            <div class="example-box negative">
+                <div class="example-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                    Not this
+                </div>
+                <p class="example-text">Requiring income pooling or pressuring residents to justify their earning patterns.</p>
             </div>
         </div>
+    </div>
 
-        <div class="value-item">
-            <h2>13. Stability Over Churn</h2>
-            <p>Core residents commit to multi-year arcs. Houses need to be lived in. By signing up to this project you commit to be resident at least a few months a year.</p>
-            <div class="example">
-                <strong>Example:</strong>
-                A resident commits to a five-year stay with periodic travel.
-            </div>
-            <div class="counterexample">
-                <strong>Counterexample:</strong>
-                You agree to be there in the rainy months (i.e. Dec, Jan) but you don't turn up without organising a caretaker from the local community.
-            </div>
-        </div>
-
-        <div class="value-item">
-            <h2>14. Medium Economic Integration</h2>
-            <p>Separate household finances with a shared infrastructure fund.</p>
-            <div class="example">
-                <strong>Example:</strong>
-                Each household pays into a maintenance/caretaker fund annually.
-            </div>
-            <div class="counterexample">
-                <strong>Counterexample:</strong>
-                Requiring income pooling or pressuring residents to justify their earning patterns.
-            </div>
-        </div>
-
-    </section>
 </main>
 
-<footer class="bg-gray-800 text-white py-4">
-    <div class="container mx-auto px-4 text-center">
+<footer class="bg-stone-800 text-white py-6">
+    <div class="container mx-auto px-4 text-center text-stone-400 text-sm">
     </div>
 </footer>
