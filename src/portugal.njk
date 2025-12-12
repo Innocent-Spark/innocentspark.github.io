@@ -71,6 +71,34 @@ customStyles: |
         font-weight: 600;
     }
 
+    .tab-nav {
+        display: flex;
+        gap: 0;
+        border-bottom: 2px solid rgba(255,255,255,0.3);
+        margin-top: 1rem;
+    }
+
+    .tab-nav a {
+        padding: 0.75rem 1.5rem;
+        color: rgba(255,255,255,0.8);
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: 2px solid transparent;
+        margin-bottom: -2px;
+        transition: all 0.2s;
+    }
+
+    .tab-nav a:hover {
+        color: white;
+        background: rgba(255,255,255,0.1);
+    }
+
+    .tab-nav a.active {
+        color: white;
+        border-bottom-color: white;
+        font-weight: 600;
+    }
+
     /* Accordion styles */
     details {
         border: 1px solid #e5e7eb;
@@ -189,6 +217,10 @@ customStyles: |
     <div class="container mx-auto px-4">
         <h1 class="text-3xl font-bold">{{ portugal.meta.title }}</h1>
         <p class="mt-2">{{ portugal.meta.headerText | markdown | safe }}</p>
+        <nav class="tab-nav">
+            <a href="/portugal/" class="active">Overview</a>
+            <a href="/portugal/values/">Values</a>
+        </nav>
     </div>
 </header>
 
