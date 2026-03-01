@@ -5,6 +5,7 @@ footprint: 29.73
 grossBuiltArea: 59.46
 grossBuiltAreaWithExtra: 77.30
 imageFolder: pics_from_jose/Casa3
+plans: /plans/casa3-plans.pdf
 ---
 
 # Casa 3

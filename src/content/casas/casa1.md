@@ -5,6 +5,7 @@ footprint: 24.27
 grossBuiltArea: 48.54
 grossBuiltAreaWithExtra: 63.10
 imageFolder: pics_from_jose/Casa1
+plans: /plans/casa1-plans.pdf
 ---
 
 # Casa 1

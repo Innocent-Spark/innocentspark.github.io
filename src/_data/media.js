@@ -85,7 +85,8 @@ module.exports = function () {
                 grossBuiltArea1FloorWithExtra: specs.grossBuiltArea1FloorWithExtra,
                 grossBuiltArea2Floors: specs.grossBuiltArea2Floors,
                 grossBuiltArea2FloorsWithExtra: specs.grossBuiltArea2FloorsWithExtra,
-                isFormerMill: specs.isFormerMill
+                isFormerMill: specs.isFormerMill,
+                plans: specs.plans
               };
 
               // Remove undefined values

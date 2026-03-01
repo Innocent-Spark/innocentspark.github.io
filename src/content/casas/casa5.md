@@ -7,6 +7,7 @@ grossBuiltArea1FloorWithExtra: 95.25
 grossBuiltArea2Floors: 146.54
 grossBuiltArea2FloorsWithExtra: 190.50
 imageFolder: pics_from_jose/Casa5
+plans: /plans/casa5-plans.pdf
 ---
 
 # Casa 5

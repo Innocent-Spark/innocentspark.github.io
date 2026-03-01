@@ -7,6 +7,7 @@ grossBuiltArea1FloorWithExtra: 100.78
 grossBuiltArea2Floors: 155.04
 grossBuiltArea2FloorsWithExtra: 201.56
 imageFolder: pics_from_jose/Casa4
+plans: /plans/casa4-plans.pdf
 ---
 
 # Casa 4
