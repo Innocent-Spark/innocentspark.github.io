@@ -104,5 +104,16 @@ pageScripts:
 
 <dialog id="toronto-lightbox" class="lightbox">
   <button class="lightbox-close" type="button" aria-label="Close image">×</button>
-  <img src="" alt="">
+  <div class="lightbox-layout">
+    <div class="lightbox-image-wrap">
+      <img src="" alt="">
+    </div>
+    <aside class="lightbox-location" aria-label="Photo capture location">
+      <div id="toronto-lightbox-map" class="lightbox-map" aria-label="Map showing the exact photo capture location"></div>
+      <div class="lightbox-location-copy">
+        <span>Exact capture location</span>
+        <strong id="toronto-lightbox-coordinates"></strong>
+      </div>
+    </aside>
+  </div>
 </dialog>

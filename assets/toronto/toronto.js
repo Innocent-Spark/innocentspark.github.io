@@ -74,11 +74,37 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const lightbox = document.getElementById("toronto-lightbox");
   const lightboxImage = lightbox.querySelector("img");
+  const lightboxCoordinates = document.getElementById("toronto-lightbox-coordinates");
+  const lightboxMap = L.map("toronto-lightbox-map", {
+    zoomControl: false,
+    attributionControl: true,
+    dragging: false,
+    scrollWheelZoom: false,
+    doubleClickZoom: false,
+    boxZoom: false,
+    keyboard: false,
+    tap: false,
+  });
+  L.tileLayer(tileUrl, tileOptions).addTo(lightboxMap);
+  const lightboxMarker = L.circleMarker([43.6532, -79.3832], {
+    radius: 9,
+    color: "#fffaf0",
+    weight: 3,
+    fillColor: "#b55d2e",
+    fillOpacity: 1,
+  }).addTo(lightboxMap);
+
   document.querySelectorAll(".image-card").forEach((button) => {
     button.addEventListener("click", () => {
+      const latitude = Number(button.dataset.lat);
+      const longitude = Number(button.dataset.lon);
       lightboxImage.src = button.dataset.full;
       lightboxImage.alt = button.dataset.alt;
+      lightboxCoordinates.textContent = `${latitude.toFixed(5)}, ${longitude.toFixed(5)}`;
       lightbox.showModal();
+      lightboxMap.setView([latitude, longitude], 17);
+      lightboxMarker.setLatLng([latitude, longitude]);
+      window.setTimeout(() => lightboxMap.invalidateSize(), 50);
     });
   });
 
