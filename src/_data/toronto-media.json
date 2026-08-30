@@ -1,0 +1,414 @@
+{
+  "roncesvalles": [
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/roncesvalles/img_20260827_201033.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.646825,
+      "longitude": -79.44366666666667
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/roncesvalles/img_20260827_201050.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.64684166666667,
+      "longitude": -79.44368666666666
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/roncesvalles/img_20260827_201117.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.64684166666667,
+      "longitude": -79.44368666666666
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/roncesvalles/img_20260827_201121.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.647305,
+      "longitude": -79.44415333333333
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/roncesvalles/img_20260827_201126.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.647305,
+      "longitude": -79.44415333333333
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/roncesvalles/img_20260827_201130.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.647305,
+      "longitude": -79.44415333333333
+    },
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/roncesvalles/vid_20260827_200555.mp4",
+      "poster": "/assets/toronto/media/roncesvalles/vid_20260827_200555-poster.webp",
+      "duration": 13,
+      "latitude": 43.6397,
+      "longitude": -79.4457
+    },
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/roncesvalles/vid_20260827_200614.mp4",
+      "poster": "/assets/toronto/media/roncesvalles/vid_20260827_200614-poster.webp",
+      "duration": 49,
+      "latitude": 43.6398,
+      "longitude": -79.4447
+    },
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/roncesvalles/vid_20260827_200816.mp4",
+      "poster": "/assets/toronto/media/roncesvalles/vid_20260827_200816-poster.webp",
+      "duration": 40,
+      "latitude": 43.6416,
+      "longitude": -79.4443
+    },
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/roncesvalles/vid_20260827_200923.mp4",
+      "poster": "/assets/toronto/media/roncesvalles/vid_20260827_200923-poster.webp",
+      "duration": 50,
+      "latitude": 43.6424,
+      "longitude": -79.4421
+    },
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/roncesvalles/vid_20260827_202038.mp4",
+      "poster": "/assets/toronto/media/roncesvalles/vid_20260827_202038-poster.webp",
+      "duration": 42,
+      "latitude": 43.6515,
+      "longitude": -79.4467
+    },
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/roncesvalles/vid_20260827_202210.mp4",
+      "poster": "/assets/toronto/media/roncesvalles/vid_20260827_202210-poster.webp",
+      "duration": 111,
+      "latitude": 43.6505,
+      "longitude": -79.4408
+    }
+  ],
+  "highPark": [
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/highPark/img_20260827_201356.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.64563666666667,
+      "longitude": -79.45254666666666
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/highPark/img_20260827_201405.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.64610166666667,
+      "longitude": -79.45347833333334
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/highPark/img_20260827_201418.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.64610166666667,
+      "longitude": -79.45347833333334
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/highPark/img_20260827_201420.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.64610166666667,
+      "longitude": -79.45347833333334
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/highPark/img_20260827_201425.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.64690666666667,
+      "longitude": -79.454075
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/highPark/img_20260827_201557.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.64848333333333,
+      "longitude": -79.45767166666667
+    },
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/highPark/vid_20260827_201252.mp4",
+      "poster": "/assets/toronto/media/highPark/vid_20260827_201252-poster.webp",
+      "duration": 49,
+      "latitude": 43.6462,
+      "longitude": -79.4497
+    },
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/highPark/vid_20260827_201613.mp4",
+      "poster": "/assets/toronto/media/highPark/vid_20260827_201613-poster.webp",
+      "duration": 152,
+      "latitude": 43.6487,
+      "longitude": -79.4576
+    }
+  ],
+  "rosedale": [
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/rosedale/img_20260828_092239.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.66830166666666,
+      "longitude": -79.39611666666667
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/rosedale/img_20260828_092249.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.66830166666666,
+      "longitude": -79.39611666666667
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/rosedale/img_20260828_092717.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.66941833333333,
+      "longitude": -79.39059333333333
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/rosedale/img_20260828_092728.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.66941833333333,
+      "longitude": -79.39059333333333
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/rosedale/img_20260828_093127.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.67242833333334,
+      "longitude": -79.37698666666667
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/rosedale/img_20260828_093130.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.67242833333334,
+      "longitude": -79.37698666666667
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/rosedale/img_20260828_093212.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.673625,
+      "longitude": -79.37749
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/rosedale/img_20260828_093212_1.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.673625,
+      "longitude": -79.37749
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/rosedale/img_20260828_093225.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.673625,
+      "longitude": -79.37749
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/rosedale/img_20260828_093229.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.673625,
+      "longitude": -79.37749
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/rosedale/img_20260828_093237.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.67395666666667,
+      "longitude": -79.37747
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/rosedale/img_20260828_093703.webp",
+      "width": 2000,
+      "height": 1500,
+      "latitude": 43.68341666666667,
+      "longitude": -79.37321666666666
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/rosedale/img_20260828_093706.webp",
+      "width": 2000,
+      "height": 1500,
+      "latitude": 43.68341666666667,
+      "longitude": -79.37321666666666
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/rosedale/img_20260828_093732.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.68391666666667,
+      "longitude": -79.37391833333334
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/rosedale/img_20260828_093741.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.68391666666667,
+      "longitude": -79.37391833333334
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/rosedale/img_20260828_093743.webp",
+      "width": 1500,
+      "height": 2000,
+      "latitude": 43.68391666666667,
+      "longitude": -79.37391833333334
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/rosedale/img_20260828_093803.webp",
+      "width": 2000,
+      "height": 1500,
+      "latitude": 43.68401166666666,
+      "longitude": -79.37309
+    },
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/rosedale/vid_20260828_093442.mp4",
+      "poster": "/assets/toronto/media/rosedale/vid_20260828_093442-poster.webp",
+      "duration": 124,
+      "latitude": 43.6736,
+      "longitude": -79.3752
+    }
+  ],
+  "danforth": [
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/danforth/vid_20260828_095234.mp4",
+      "poster": "/assets/toronto/media/danforth/vid_20260828_095234-poster.webp",
+      "duration": 56,
+      "latitude": 43.677,
+      "longitude": -79.3555
+    },
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/danforth/vid_20260828_095444.mp4",
+      "poster": "/assets/toronto/media/danforth/vid_20260828_095444-poster.webp",
+      "duration": 85,
+      "latitude": 43.6782,
+      "longitude": -79.3482
+    },
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/danforth/vid_20260828_095846.mp4",
+      "poster": "/assets/toronto/media/danforth/vid_20260828_095846-poster.webp",
+      "duration": 25,
+      "latitude": 43.6714,
+      "longitude": -79.341
+    },
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/danforth/vid_20260828_100001.mp4",
+      "poster": "/assets/toronto/media/danforth/vid_20260828_100001-poster.webp",
+      "duration": 55,
+      "latitude": 43.6714,
+      "longitude": -79.341
+    }
+  ],
+  "leslieville": [
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/leslieville/vid_20260828_100223.mp4",
+      "poster": "/assets/toronto/media/leslieville/vid_20260828_100223-poster.webp",
+      "duration": 119,
+      "latitude": 43.6676,
+      "longitude": -79.335
+    },
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/leslieville/vid_20260828_100626.mp4",
+      "poster": "/assets/toronto/media/leslieville/vid_20260828_100626-poster.webp",
+      "duration": 95,
+      "latitude": 43.6627,
+      "longitude": -79.3322
+    }
+  ],
+  "beaches": [
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/beaches/img_20260828_102141.webp",
+      "width": 2000,
+      "height": 1500,
+      "latitude": 43.66576,
+      "longitude": -79.30166
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/beaches/img_20260828_102734.webp",
+      "width": 2000,
+      "height": 1500,
+      "latitude": 43.66659833333333,
+      "longitude": -79.30085666666666
+    },
+    {
+      "type": "image",
+      "src": "/assets/toronto/media/beaches/img_20260828_103024.webp",
+      "width": 2000,
+      "height": 1500,
+      "latitude": 43.66670833333333,
+      "longitude": -79.300775
+    },
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/beaches/vid_20260828_101607.mp4",
+      "poster": "/assets/toronto/media/beaches/vid_20260828_101607-poster.webp",
+      "duration": 42,
+      "latitude": 43.6698,
+      "longitude": -79.3009
+    },
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/beaches/vid_20260828_101844.mp4",
+      "poster": "/assets/toronto/media/beaches/vid_20260828_101844-poster.webp",
+      "duration": 9,
+      "latitude": 43.6664,
+      "longitude": -79.3009
+    },
+    {
+      "type": "video",
+      "src": "/assets/toronto/media/beaches/vid_20260828_101936.mp4",
+      "poster": "/assets/toronto/media/beaches/vid_20260828_101936-poster.webp",
+      "duration": 41,
+      "latitude": 43.6658,
+      "longitude": -79.3017
+    }
+  ]
+}

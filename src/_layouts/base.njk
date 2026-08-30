@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
+    {% if robots %}<meta name="robots" content="{{ robots }}">{% endif %}
     {% if customStyles %}
     <style>
         {{ customStyles | safe }}
@@ -31,4 +32,4 @@
     {% endfor %}
     {% endif %}
 </body>
-</html> 
+</html>

@@ -44,4 +44,4 @@ module.exports = function(eleventyConfig) {
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk"
   };
-}; 
+};

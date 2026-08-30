@@ -1,0 +1,108 @@
+---
+layout: base.njk
+permalink: /toronto/index.html
+title: Toronto Neighbourhood Field Notes
+bodyClass: "toronto-page"
+robots: "noindex, nofollow, noarchive"
+externalStyles:
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
+  - /assets/toronto/toronto.css
+pageScripts:
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
+  - /assets/toronto/toronto.js
+---
+
+<header class="toronto-hero">
+  <div class="toronto-shell hero-grid">
+    <div class="hero-copy">
+      <p class="kicker"><span></span> Unlisted field notes · August 2026</p>
+      <h1>Finding a place<br>in <em>Toronto</em></h1>
+      <p class="hero-intro">A street-level record of six neighbourhoods—what the housing, pace, greenery and connections actually felt like while moving through them.</p>
+      <div class="hero-stats" aria-label="Collection summary">
+        <div><strong>6</strong><span>areas</span></div>
+        <div><strong>32</strong><span>photos</span></div>
+        <div><strong>18</strong><span>route videos</span></div>
+      </div>
+    </div>
+    <div class="overview-wrap">
+      <div id="toronto-overview-map" class="overview-map" aria-label="Map of the six Toronto neighbourhoods"></div>
+      <p class="map-caption">Selected City of Toronto planning boundaries</p>
+    </div>
+  </div>
+</header>
+
+<main class="toronto-shell toronto-main">
+  <div class="section-heading">
+    <p class="kicker"><span></span> Neighbourhoods</p>
+    <h2>Open an area to explore</h2>
+    <p>Each gallery follows the route in chronological order. Map dots indicate where the retained media was captured.</p>
+  </div>
+
+  <div class="area-list">
+    {% for area in toronto.areas %}
+      {% set areaMedia = torontoMedia[area.key] %}
+      <details class="area-card" data-area="{{ area.key }}">
+        <summary
+          data-boundaries="{{ area.boundaryNames | join(',') }}"
+          data-center-lat="{{ area.mapCenter[0] }}"
+          data-center-lon="{{ area.mapCenter[1] }}"
+          data-zoom="{{ area.mapZoom }}"
+        >
+          <span class="summary-copy">
+            <span class="area-number">0{{ loop.index }}</span>
+            <span class="area-eyebrow">{{ area.eyebrow }}</span>
+            <span class="area-title-row">
+              <span class="area-name">{{ area.name }}</span>
+              <span class="media-count">{{ areaMedia.length }} items</span>
+            </span>
+            <span class="area-summary">{{ area.summary }}</span>
+            <span class="open-label"><span>Explore the field notes</span><i aria-hidden="true"></i></span>
+          </span>
+          <span class="mini-map-wrap">
+            <span id="map-{{ area.key }}" class="mini-map" aria-hidden="true"></span>
+            <span class="boundary-label">Planning boundary</span>
+          </span>
+        </summary>
+
+        <div class="area-expanded">
+          <p class="decision-note">{{ area.decisionNote }}</p>
+          <div class="media-grid">
+            {% for item in areaMedia %}
+              {% if item.type == "image" %}
+                <button
+                  class="media-card image-card"
+                  type="button"
+                  data-full="{{ item.src }}"
+                  data-alt="{{ area.name }} street view {{ loop.index }}"
+                  data-lat="{{ item.latitude }}"
+                  data-lon="{{ item.longitude }}"
+                >
+                  <img src="{{ item.src }}" alt="{{ area.name }} street view" width="{{ item.width }}" height="{{ item.height }}" loading="lazy">
+                  <span class="media-kind">Photo</span>
+                </button>
+              {% else %}
+                <figure
+                  class="media-card video-card"
+                  data-lat="{{ item.latitude }}"
+                  data-lon="{{ item.longitude }}"
+                >
+                  <video controls playsinline preload="none" poster="{{ item.poster }}" aria-label="{{ area.name }} route video">
+                    <source data-src="{{ item.src }}" type="video/mp4">
+                  </video>
+                  <figcaption><span>Route video</span><time>{{ item.duration }} sec</time></figcaption>
+                </figure>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </details>
+    {% endfor %}
+  </div>
+
+  <p class="source-note">Boundaries use the City of Toronto’s 158 social-planning neighbourhood dataset. “Danforth” combines the planning areas followed by the recorded route; “Leslieville” is represented by South Riverdale.</p>
+</main>
+
+<dialog id="toronto-lightbox" class="lightbox">
+  <button class="lightbox-close" type="button" aria-label="Close image">×</button>
+  <img src="" alt="">
+</dialog>
