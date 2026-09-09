@@ -1,0 +1,100 @@
+---
+layout: base.njk
+permalink: /sf/index.html
+title: Bay Area Neighbourhood Field Notes
+bodyClass: "sf-page"
+robots: "noindex, nofollow, noarchive"
+externalStyles:
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
+  - /assets/sf/sf.css?v=field-notes-1
+pageScripts:
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
+  - /assets/sf/sf.js?v=field-notes-1
+---
+
+<header class="sf-hero">
+  <div class="sf-shell hero-grid">
+    <div class="hero-copy">
+      <p class="kicker"><span></span> Unlisted field notes · August–September 2026</p>
+      <h1>Finding a place<br>by the <em>Bay</em></h1>
+      <p class="hero-intro">A street-level record of San Francisco, Berkeley and North Oakland—what the housing, weather, pace and connections actually felt like while moving through them.</p>
+      <div class="hero-stats" aria-label="Collection summary">
+        <div><strong>{{ sf.stats.areas }}</strong><span>areas</span></div>
+        <div><strong>{{ sf.stats.photos }}</strong><span>photos</span></div>
+        <div><strong>{{ sf.stats.videos }}</strong><span>route videos</span></div>
+      </div>
+    </div>
+    <div class="overview-wrap">
+      <div id="sf-overview-map" class="overview-map" aria-label="Map of the seven Bay Area neighborhoods"></div>
+      <p class="map-caption">San Francisco · Berkeley · Oakland</p>
+    </div>
+  </div>
+</header>
+
+<main class="sf-shell sf-main">
+  <div class="section-heading">
+    <p class="kicker"><span></span> Neighborhoods</p>
+    <h2>Open an area to explore</h2>
+    <p>The galleries follow each outing in chronological order. Map dots mark the start points of retained route videos; photos are grouped by the surrounding neighborhood.</p>
+  </div>
+
+  <div class="area-list">
+    {% for area in sf.areas %}
+      {% set areaMedia = sfMedia[area.key] %}
+      <details class="area-card" data-area="{{ area.key }}">
+        <summary data-center-lat="{{ area.mapCenter[0] }}" data-center-lon="{{ area.mapCenter[1] }}" data-zoom="{{ area.mapZoom }}">
+          <span class="summary-copy">
+            <span class="area-number">0{{ loop.index }}</span>
+            <span class="area-eyebrow">{{ area.eyebrow }}</span>
+            <span class="area-title-row">
+              <span class="area-name">{{ area.name }}</span>
+              <span class="media-count">{{ areaMedia.length }} items</span>
+            </span>
+            <span class="area-summary">{{ area.summary }}</span>
+            <span class="open-label"><span>Explore the field notes</span><i aria-hidden="true"></i></span>
+          </span>
+          <span class="mini-map-wrap">
+            <span id="map-{{ area.key }}" class="mini-map" aria-hidden="true"></span>
+            <span class="boundary-label">Recorded area</span>
+          </span>
+        </summary>
+
+        <div class="area-expanded">
+          <p class="decision-note">{{ area.decisionNote }}</p>
+          <div class="media-grid">
+            {% for item in areaMedia %}
+              {% if item.type == "image" %}
+                <button class="media-card image-card" type="button" data-full="{{ item.src }}" data-alt="{{ area.name }} street view" data-area-name="{{ area.name }}">
+                  <img src="{{ item.src }}" alt="{{ area.name }} street view" width="{{ item.width }}" height="{{ item.height }}" loading="lazy">
+                  <span class="media-kind">Photo</span>
+                </button>
+              {% else %}
+                <figure class="media-card video-card" data-lat="{{ item.latitude }}" data-lon="{{ item.longitude }}">
+                  <video controls playsinline preload="none" poster="{{ item.poster }}" aria-label="{{ area.name }} route video">
+                    <source data-src="{{ item.src }}" type="video/mp4">
+                  </video>
+                  <figcaption><span>Route video</span><time>{{ item.duration }} sec</time></figcaption>
+                </figure>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </details>
+    {% endfor %}
+  </div>
+
+  <p class="source-note">Locations are reconstructed from the original capture sequence and embedded video coordinates. Repeated frames, unusably blurred images, transit-only shots and the separate ferry outing were removed.</p>
+</main>
+
+<dialog id="sf-lightbox" class="lightbox">
+  <button class="lightbox-close" type="button" aria-label="Close image">×</button>
+  <div class="lightbox-layout sf-lightbox-layout">
+    <div class="lightbox-image-wrap"><img src="" alt=""></div>
+    <aside class="lightbox-location sf-lightbox-caption">
+      <div class="lightbox-location-copy">
+        <span>Neighborhood field note</span>
+        <strong id="sf-lightbox-area"></strong>
+      </div>
+    </aside>
+  </div>
+</dialog>

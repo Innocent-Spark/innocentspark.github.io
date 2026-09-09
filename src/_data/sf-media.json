@@ -1,0 +1,476 @@
+{
+  "outerSunset": [
+    {
+      "type": "image",
+      "src": "/assets/sf/media/outerSunset/img_20260830_133258.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/outerSunset/img_20260830_133314.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/outerSunset/img_20260830_133321.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/outerSunset/img_20260830_134024.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/outerSunset/img_20260830_134048.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/outerSunset/img_20260830_134120.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/outerSunset/img_20260830_134707.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/outerSunset/img_20260830_134715.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/outerSunset/img_20260830_134747.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/outerSunset/vid_20260830_134222.mp4",
+      "poster": "/assets/sf/media/outerSunset/vid_20260830_134222-poster.webp",
+      "duration": 87,
+      "latitude": 37.7403,
+      "longitude": -122.5023
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/outerSunset/vid_20260830_134942.mp4",
+      "poster": "/assets/sf/media/outerSunset/vid_20260830_134942-poster.webp",
+      "duration": 59,
+      "latitude": 37.7581,
+      "longitude": -122.4951
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/outerSunset/vid_20260830_135247.mp4",
+      "poster": "/assets/sf/media/outerSunset/vid_20260830_135247-poster.webp",
+      "duration": 55,
+      "latitude": 37.763,
+      "longitude": -122.4915
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/outerSunset/vid_20260830_135413.mp4",
+      "poster": "/assets/sf/media/outerSunset/vid_20260830_135413-poster.webp",
+      "duration": 40,
+      "latitude": 37.7632,
+      "longitude": -122.4854
+    }
+  ],
+  "innerSunset": [
+    {
+      "type": "image",
+      "src": "/assets/sf/media/innerSunset/img_20260830_140646.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/innerSunset/img_20260830_141043.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/innerSunset/img_20260830_141326.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/innerSunset/img_20260830_141336.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/innerSunset/img_20260830_141355.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/innerSunset/img_20260830_141403.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/innerSunset/img_20260830_141418.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/innerSunset/img_20260830_141753.webp",
+      "width": 1800,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/innerSunset/img_20260830_141905.webp",
+      "width": 1800,
+      "height": 1350
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/innerSunset/vid_20260830_140651.mp4",
+      "poster": "/assets/sf/media/innerSunset/vid_20260830_140651-poster.webp",
+      "duration": 121,
+      "latitude": 37.7639,
+      "longitude": -122.4704
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/innerSunset/vid_20260830_141148.mp4",
+      "poster": "/assets/sf/media/innerSunset/vid_20260830_141148-poster.webp",
+      "duration": 89,
+      "latitude": 37.764,
+      "longitude": -122.456
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/innerSunset/vid_20260830_141626.mp4",
+      "poster": "/assets/sf/media/innerSunset/vid_20260830_141626-poster.webp",
+      "duration": 21,
+      "latitude": 37.7608,
+      "longitude": -122.4465
+    }
+  ],
+  "bernalHeights": [
+    {
+      "type": "image",
+      "src": "/assets/sf/media/bernalHeights/img_20260906_113210.webp",
+      "width": 1800,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/bernalHeights/img_20260906_115620.webp",
+      "width": 1800,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/bernalHeights/img_20260906_115632.webp",
+      "width": 1800,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/bernalHeights/img_20260906_115639.webp",
+      "width": 1800,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/bernalHeights/img_20260906_115841.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/bernalHeights/img_20260906_120045.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/bernalHeights/img_20260906_120116.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/bernalHeights/img_20260906_120434.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/bernalHeights/img_20260906_120657.webp",
+      "width": 1350,
+      "height": 1800
+    }
+  ],
+  "noeValley": [
+    {
+      "type": "image",
+      "src": "/assets/sf/media/noeValley/img_20260906_121715.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/noeValley/img_20260906_122015.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/noeValley/img_20260906_122300.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/noeValley/img_20260906_122754.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/noeValley/img_20260906_124344.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/noeValley/img_20260906_125739.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/noeValley/img_20260906_125824.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/noeValley/img_20260906_130043.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/noeValley/img_20260906_130946.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/noeValley/img_20260906_131608.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/noeValley/vid_20260906_132318.mp4",
+      "poster": "/assets/sf/media/noeValley/vid_20260906_132318-poster.webp",
+      "duration": 40,
+      "latitude": 37.7499,
+      "longitude": -122.4318
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/noeValley/vid_20260906_132514.mp4",
+      "poster": "/assets/sf/media/noeValley/vid_20260906_132514-poster.webp",
+      "duration": 36,
+      "latitude": 37.7547,
+      "longitude": -122.4318
+    }
+  ],
+  "castroMission": [
+    {
+      "type": "image",
+      "src": "/assets/sf/media/castroMission/img_20260906_133001.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/castroMission/img_20260906_133501.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/castroMission/img_20260906_133514.webp",
+      "width": 1800,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/castroMission/img_20260906_141719.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/castroMission/vid_20260830_142040.mp4",
+      "poster": "/assets/sf/media/castroMission/vid_20260830_142040-poster.webp",
+      "duration": 129,
+      "latitude": 37.7606,
+      "longitude": -122.4398
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/castroMission/vid_20260830_142613.mp4",
+      "poster": "/assets/sf/media/castroMission/vid_20260830_142613-poster.webp",
+      "duration": 51,
+      "latitude": 37.7635,
+      "longitude": -122.4203
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/castroMission/vid_20260830_143237.mp4",
+      "poster": "/assets/sf/media/castroMission/vid_20260830_143237-poster.webp",
+      "duration": 17,
+      "latitude": 37.7705,
+      "longitude": -122.403
+    }
+  ],
+  "berkeley": [
+    {
+      "type": "video",
+      "src": "/assets/sf/media/berkeley/vid_20260906_151119.mp4",
+      "poster": "/assets/sf/media/berkeley/vid_20260906_151119-poster.webp",
+      "duration": 74,
+      "latitude": 37.8704,
+      "longitude": -122.2674
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/berkeley/vid_20260906_151445.mp4",
+      "poster": "/assets/sf/media/berkeley/vid_20260906_151445-poster.webp",
+      "duration": 33,
+      "latitude": 37.8703,
+      "longitude": -122.2681
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/berkeley/vid_20260906_151625.mp4",
+      "poster": "/assets/sf/media/berkeley/vid_20260906_151625-poster.webp",
+      "duration": 54,
+      "latitude": 37.8658,
+      "longitude": -122.2678
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/berkeley/vid_20260906_151834.mp4",
+      "poster": "/assets/sf/media/berkeley/vid_20260906_151834-poster.webp",
+      "duration": 54,
+      "latitude": 37.8633,
+      "longitude": -122.2628
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/berkeley/vid_20260906_151945.mp4",
+      "poster": "/assets/sf/media/berkeley/vid_20260906_151945-poster.webp",
+      "duration": 41,
+      "latitude": 37.8596,
+      "longitude": -122.262
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/berkeley/vid_20260906_152050.mp4",
+      "poster": "/assets/sf/media/berkeley/vid_20260906_152050-poster.webp",
+      "duration": 36,
+      "latitude": 37.8557,
+      "longitude": -122.2624
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/berkeley/vid_20260906_152410.mp4",
+      "poster": "/assets/sf/media/berkeley/vid_20260906_152410-poster.webp",
+      "duration": 92,
+      "latitude": 37.8496,
+      "longitude": -122.2658
+    }
+  ],
+  "northOakland": [
+    {
+      "type": "image",
+      "src": "/assets/sf/media/northOakland/img_20260906_153049.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/northOakland/img_20260906_153107.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/northOakland/img_20260906_153110.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/northOakland/img_20260906_153124.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/northOakland/img_20260906_153140.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/northOakland/img_20260906_153144.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/northOakland/img_20260906_153150.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/northOakland/img_20260906_153518.webp",
+      "width": 1800,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/assets/sf/media/northOakland/img_20260906_153652.webp",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "type": "video",
+      "src": "/assets/sf/media/northOakland/vid_20260906_150237.mp4",
+      "poster": "/assets/sf/media/northOakland/vid_20260906_150237-poster.webp",
+      "duration": 19,
+      "latitude": 37.8403,
+      "longitude": -122.2695
+    }
+  ]
+}
