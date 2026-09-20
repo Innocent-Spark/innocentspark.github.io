@@ -1,0 +1,84 @@
+---
+layout: base.njk
+permalink: /berlin/index.html
+title: Berlin house shortlist
+bodyClass: "berlin-homes-page"
+robots: "noindex, nofollow, noarchive"
+externalStyles:
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
+  - /assets/berlin/berlin.css?v=1
+pageScripts:
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
+  - /assets/berlin/berlin.js?v=1
+---
+
+<main class="berlin-shell">
+  <header class="berlin-header">
+    <div>
+      <p class="berlin-kicker">Berlin rental search · September 2026</p>
+      <h1>A house, a garden<br>and room to grow</h1>
+    </div>
+    <div class="header-aside">
+      <p>Current Berlin houses under €10,000/month, prioritising a garage and a substantial private garden.</p>
+      <div class="header-stats" aria-label="Shortlist summary">
+        <span><strong>{{ berlinHomes | length }}</strong> live listings</span>
+        <span><strong>4</strong> strong matches</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="berlin-map-panel" aria-labelledby="berlin-map-title">
+    <div class="berlin-map-heading">
+      <div>
+        <p class="berlin-kicker">Across the city</p>
+        <h2 id="berlin-map-title">Where the houses are</h2>
+      </div>
+      <div class="map-legend" aria-label="Map legend">
+        <span><i class="legend-dot strong"></i> Garden + garage</span>
+        <span><i class="legend-dot garden"></i> Garden-led alternative</span>
+      </div>
+    </div>
+    <div id="berlin-homes-map" class="berlin-homes-map" aria-label="Map of shortlisted Berlin rental houses"></div>
+    <p class="precision-note">Markers show neighbourhood or disclosed location. Most portals withhold the street address until contact.</p>
+  </section>
+
+  <section class="berlin-listing-section" aria-labelledby="berlin-listing-title">
+    <div class="berlin-listing-intro">
+      <p class="berlin-kicker">Shortlist</p>
+      <h2 id="berlin-listing-title">Open a house</h2>
+      <p>Prices reproduce the source listing. “Cold” excludes utilities; “total” and “warm” follow the portal’s advertised figure.</p>
+      <div class="filters" role="group" aria-label="Filter listings">
+        <button type="button" class="is-selected" data-filter="all">All {{ berlinHomes | length }}</button>
+        <button type="button" data-filter="strong">Garden + garage</button>
+      </div>
+    </div>
+
+    <ol id="berlin-home-list" class="berlin-home-list">
+      {% for home in berlinHomes %}
+        <li data-fit="{{ home.fit }}">
+          <a href="{{ home.url }}" target="_blank" rel="noopener" data-lat="{{ home.latitude }}" data-lon="{{ home.longitude }}">
+            <span class="home-number">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>
+            <span class="home-main">
+              <span class="home-topline">
+                <strong>{{ home.name }}</strong>
+                <em class="fit-pill {{ home.fit }}">{% if home.fit == "strong" %}Garden + garage{% else %}Garden alternative{% endif %}</em>
+              </span>
+              <span class="home-area">{{ home.area }} · {{ home.source }}</span>
+              <span class="home-facts">
+                <b>{{ home.price }}</b><span>{{ home.rooms }}</span><span>{{ home.livingArea }}</span><span>{{ home.plot }}</span>
+              </span>
+              <span class="home-features"><span>{{ home.parking }}</span><span>{{ home.garden }}</span></span>
+              <small>{{ home.note }}</small>
+            </span>
+            <span class="home-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <footer class="berlin-footer">
+    <p>Checked 20 September 2026 · listings can disappear quickly.</p>
+    <p>Map data and approximate positions © OpenStreetMap contributors.</p>
+  </footer>
+</main>
