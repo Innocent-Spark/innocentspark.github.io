@@ -1,0 +1,90 @@
+---
+layout: base.njk
+permalink: /toronto/apartments/index.html
+title: Toronto rental shortlist
+bodyClass: "apartments-page"
+robots: "noindex, nofollow, noarchive"
+externalStyles:
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
+  - /assets/toronto/apartments.css?v=1
+pageScripts:
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
+  - /assets/toronto/apartments.js?v=1
+---
+
+<main class="apartments-shell">
+  <header class="apartments-header">
+    <div>
+      <p class="apartments-kicker">Toronto rental search</p>
+      <h1>Homes with room<br>for a garden</h1>
+    </div>
+    <p class="apartments-intro">Six houses from the current shortlist, plotted from The Beaches through East York. Select a marker or address to open the original listing.</p>
+  </header>
+
+  <section class="map-panel" aria-labelledby="map-title">
+    <div class="map-heading">
+      <div>
+        <p class="apartments-kicker">Shortlist · 6 homes</p>
+        <h2 id="map-title">East Toronto at a glance</h2>
+      </div>
+      <p>OpenStreetMap · exact street addresses</p>
+    </div>
+    <div id="apartments-map" class="apartments-map" aria-label="Map of shortlisted Toronto rental homes"></div>
+  </section>
+
+  <section class="listing-section" aria-labelledby="listing-title">
+    <div class="listing-heading">
+      <p class="apartments-kicker">Addresses</p>
+      <h2 id="listing-title">Open a listing</h2>
+    </div>
+    <ol id="apartment-list" class="apartment-list">
+      <li>
+        <a href="https://www.realtor.ca/real-estate/29999966/66-ferncroft-drive-toronto-birchcliffe-cliffside" target="_blank" rel="noopener" data-lat="43.6881774" data-lon="-79.2771681">
+          <span class="listing-number">01</span>
+          <span class="listing-copy"><strong>66 Ferncroft Drive</strong><small>Birchcliffe–Cliffside</small></span>
+          <span class="listing-arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.realtor.ca/real-estate/30285448/57-valhalla-boulevard-toronto-birchcliffe-cliffside" target="_blank" rel="noopener" data-lat="43.6889100" data-lon="-79.2677000">
+          <span class="listing-number">02</span>
+          <span class="listing-copy"><strong>57 Valhalla Boulevard</strong><small>Birchcliffe–Cliffside</small></span>
+          <span class="listing-arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.realtor.ca/real-estate/30079582/82-main-street-toronto-east-end-danforth" target="_blank" rel="noopener" data-lat="43.6815100" data-lon="-79.2995100">
+          <span class="listing-number">03</span>
+          <span class="listing-copy"><strong>82 Main Street</strong><small>East End–Danforth</small></span>
+          <span class="listing-arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.realtor.ca/real-estate/29903707/639-mortimer-avenue-toronto-danforth-village-east-york" target="_blank" rel="noopener" data-lat="43.6914800" data-lon="-79.3197300">
+          <span class="listing-number">04</span>
+          <span class="listing-copy"><strong>639 Mortimer Avenue</strong><small>Danforth Village–East York</small></span>
+          <span class="listing-arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.realtor.ca/real-estate/30277721/244-donlands-avenue-toronto-danforth-village-east-york" target="_blank" rel="noopener" data-lat="43.6887900" data-lon="-79.3410300">
+          <span class="listing-number">05</span>
+          <span class="listing-copy"><strong>244 Donlands Avenue</strong><small>Danforth Village–East York</small></span>
+          <span class="listing-arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.realtor.ca/real-estate/30291095/41-bonnie-brae-boulevard-toronto-danforth-village-east-york" target="_blank" rel="noopener" data-lat="43.6891000" data-lon="-79.3313100">
+          <span class="listing-number">06</span>
+          <span class="listing-copy"><strong>41 Bonnie Brae Boulevard</strong><small>Danforth Village–East York</small></span>
+          <span class="listing-arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+    </ol>
+  </section>
+
+  <footer class="apartments-footer">
+    <p>Map data and address positions © OpenStreetMap contributors.</p>
+    <a href="/toronto/">Toronto neighbourhood field notes</a>
+  </footer>
+</main>
