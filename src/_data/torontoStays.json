@@ -12,7 +12,9 @@
     "laundry": "Paid coin laundry in building",
     "booking_type": "Request to book; host has 24 hours to accept",
     "cancellation": "Full refund within 24 hours after booking. Thereafter, before Oct 21 at 15:00 Toronto time: 50% of nightly price refunded, no service-fee refund. After Oct 21 at 15:00: nonrefundable.",
-    "limitations": "Second block requires minimum 10 nights, so cannot use this property for the 8-night stay."
+    "limitations": "Second block requires minimum 10 nights, so cannot use this property for the 8-night stay.",
+    "photoSource": "https://a0.muscache.com/im/pictures/miso/Hosting-53566586/original/16251510-bdbd-4326-b24d-a8a23983e0db.jpeg?im_w=1200",
+    "photo": "/assets/toronto/stays/53566586.jpg"
   },
   {
     "id": "1092739684760075623",
@@ -27,6 +29,8 @@
     "laundry": "Washer and dryer listed; in-unit/shared status and cost not verified. Laundry-room cameras disclosed.",
     "booking_type": "Instant book",
     "cancellation": "Full refund before Nov 8 at 15:00 Toronto time. Thereafter before Nov 13 at 15:00: 50% refund of nights except first; first night and service fee not refunded.",
-    "limitations": "Unavailable for first block when checked earlier."
+    "limitations": "Unavailable for first block when checked earlier.",
+    "photoSource": "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA5MjczOTY4NDc2MDA3NTYyMw%3D%3D/original/19ce2947-f19d-4570-8c0a-81ca2000f45c.jpeg?im_w=1200",
+    "photo": "/assets/toronto/stays/1092739684760075623.jpg"
   }
 ]
