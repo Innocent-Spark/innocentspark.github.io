@@ -1,0 +1,32 @@
+[
+  {
+    "id": "53566586",
+    "name": "Lovely 2nd floor rental in cool west end Toronto",
+    "neighborhood": "West end Toronto; exact neighborhood not captured",
+    "nights": 12,
+    "total": 1440.58,
+    "rating": 4.91,
+    "review_count": 23,
+    "workspace": "Separate office",
+    "kitchen": true,
+    "laundry": "Paid coin laundry in building",
+    "booking_type": "Request to book; host has 24 hours to accept",
+    "cancellation": "Full refund within 24 hours after booking. Thereafter, before Oct 21 at 15:00 Toronto time: 50% of nightly price refunded, no service-fee refund. After Oct 21 at 15:00: nonrefundable.",
+    "limitations": "Second block requires minimum 10 nights, so cannot use this property for the 8-night stay."
+  },
+  {
+    "id": "1092739684760075623",
+    "name": "Bright 1BR Near Downtown | Monthly Stays Welcome",
+    "neighborhood": "Parkdale",
+    "nights": 8,
+    "total": 897.07,
+    "rating": 4.95,
+    "review_count": 37,
+    "workspace": "Dedicated workspace, Wi-Fi and Ethernet",
+    "kitchen": true,
+    "laundry": "Washer and dryer listed; in-unit/shared status and cost not verified. Laundry-room cameras disclosed.",
+    "booking_type": "Instant book",
+    "cancellation": "Full refund before Nov 8 at 15:00 Toronto time. Thereafter before Nov 13 at 15:00: 50% refund of nights except first; first night and service fee not refunded.",
+    "limitations": "Unavailable for first block when checked earlier."
+  }
+]
